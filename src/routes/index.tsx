@@ -305,7 +305,7 @@ function Index() {
             <div className="rounded-xl overflow-hidden border-silver shadow-elegant min-h-[500px]">
               <iframe
                 title="Mapa WM Detail"
-                src="https://www.google.com/maps?q=Warszawa+detailing&output=embed"
+                src="https://www.google.com/maps?q=ul.+%C5%9Aw.+Antoniego+166,+41-303+D%C4%85browa+G%C3%B3rnicza&output=embed"
                 className="w-full h-full min-h-[500px] grayscale contrast-125"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
