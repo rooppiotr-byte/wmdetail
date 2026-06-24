@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Sparkles, Droplets, Sofa, Shield, MapPin, Phone, Mail, Instagram, ArrowRight } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logoAsset from "@/assets/wm-detail-logo.png.asset.json";
 import heroCar from "@/assets/hero-car.jpg";
 import servicePolish from "@/assets/service-polish.jpg";
 import serviceInterior from "@/assets/service-interior.jpg";
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Logo({ className = "" }: { className?: string }) {
-  return <img src={logo} alt="WM Detail" className={className} width={512} height={512} />;
+  return <img src={logoAsset.url} alt="WM Detail" className={`${className} invert`} width={1920} height={1280} />;
 }
 
 const services = [
