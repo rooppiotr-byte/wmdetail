@@ -45,13 +45,13 @@ const services = [
   {
     icon: Droplets,
     title: "Mycie detailingowe",
-    desc: "Bezdotykowe mycie metodą dwóch wiader, dekontaminacja chemiczna i mechaniczna, suszenie microfibrą premium.",
+    desc: "Pre wash, opony i felgi, wnęki drzwi, osuszanie, szyby.",
     img: servicePolish,
   },
   {
     icon: Sparkles,
     title: "Korekta lakieru",
-    desc: "Usuwanie rys, hologramów i defektów. Maszynowa polerka z pomiarem grubości powłoki i lustrzanym wykończeniem.",
+    desc: "Usuwanie rys, hologramów i defektów. Poprawa połysku i redukcja zarysowań.",
     img: serviceCeramic,
   },
   {
@@ -235,7 +235,7 @@ function Index() {
       <section id="kontakt" className="relative py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
-            <p className="text-xs uppercase tracking-[0.4em] text-silver mb-4">— Kontakt</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-silver mb-4">— KONTAKT</p>
             <h2 className="font-display text-5xl sm:text-6xl font-bold">
               Zarezerwuj <span className="text-silver">termin</span>
             </h2>
@@ -243,23 +243,23 @@ function Index() {
 
           <div className="grid lg:grid-cols-2 gap-8">
             <div className="bg-graphite border-silver rounded-xl p-10 shadow-elegant space-y-8">
-              <a href="tel:+48500000000" className="flex items-start gap-5 group">
+              <a href="tel:+48505797300" className="flex items-start gap-5 group">
                 <div className="w-12 h-12 shrink-0 rounded-md bg-background border-silver flex items-center justify-center group-hover:bg-secondary transition-colors">
                   <Phone className="w-5 h-5 text-silver" />
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-1">Telefon</p>
-                  <p className="font-display text-2xl">+48 500 000 000</p>
+                  <p className="font-display text-2xl">+48 505 797 300</p>
                 </div>
               </a>
 
-              <a href="mailto:kontakt@wmdetail.pl" className="flex items-start gap-5 group">
+              <a href="mailto:wmdetaildg@gmail.com" className="flex items-start gap-5 group">
                 <div className="w-12 h-12 shrink-0 rounded-md bg-background border-silver flex items-center justify-center group-hover:bg-secondary transition-colors">
                   <Mail className="w-5 h-5 text-silver" />
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-1">E-mail</p>
-                  <p className="font-display text-2xl">kontakt@wmdetail.pl</p>
+                  <p className="font-display text-2xl">wmdetaildg@gmail.com</p>
                 </div>
               </a>
 
@@ -268,9 +268,9 @@ function Index() {
                   <MapPin className="w-5 h-5 text-silver" />
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-1">Adres studio</p>
-                  <p className="font-display text-2xl">ul. Detailingowa 1</p>
-                  <p className="text-muted-foreground">00-000 Warszawa</p>
+                  <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-1">ADRES{"\u00a0"}</p>
+                  <p className="font-display text-2xl">ul. Św. Antoniego 166</p>
+                  <p className="text-muted-foreground">41-303 Dąbrowa Górnicza</p>
                 </div>
               </div>
 
@@ -285,7 +285,7 @@ function Index() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-1">Instagram</p>
-                  <p className="font-display text-2xl">@wmdetail</p>
+                  <p className="font-display text-2xl">@wmdetail.dg</p>
                 </div>
               </a>
 
@@ -293,11 +293,11 @@ function Index() {
                 <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-3">Godziny otwarcia</p>
                 <div className="flex justify-between text-foreground">
                   <span>Pon — Pt</span>
-                  <span className="text-silver">09:00 — 18:00</span>
+                  <span className="text-silver">08:00 — 16:00</span>
                 </div>
                 <div className="flex justify-between text-foreground mt-1">
                   <span>Sobota</span>
-                  <span className="text-silver">10:00 — 14:00</span>
+                  <span className="text-silver">09:00 — 14:00</span>
                 </div>
               </div>
             </div>
@@ -320,7 +320,7 @@ function Index() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <Logo className="h-8 w-auto" />
-            <span className="font-display tracking-widest text-silver">WM DETAIL</span>
+            <span className="font-display tracking-widest text-silver">CAR DETAILING</span>
           </div>
           <p className="text-sm text-muted-foreground uppercase tracking-widest">
             © {new Date().getFullYear()} WM Detail — Odpicujemy Twoją Furę
