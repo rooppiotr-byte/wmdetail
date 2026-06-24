@@ -82,8 +82,7 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
-            <Logo className="h-10 w-auto" />
-            <span className="hidden sm:block font-display text-xl tracking-widest text-silver">WM DETAIL</span>
+            <Logo className="h-16 w-auto" />
           </a>
           <nav className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest text-muted-foreground">
             <a href="#uslugi" className="hover:text-foreground transition-colors">Usługi</a>
