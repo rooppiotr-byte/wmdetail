@@ -82,7 +82,7 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
-            <Logo className="h-12 w-auto" />
+            <Logo className="h-9 sm:h-12 w-auto" />
           </a>
           <nav className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest text-muted-foreground">
             <a href="#uslugi" className="hover:text-foreground transition-colors">Usługi</a>
@@ -90,8 +90,8 @@ function Index() {
             <a href="#kontakt" className="hover:text-foreground transition-colors">Kontakt</a>
           </nav>
           <a
-            href="#kontakt"
-            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-md border-silver text-sm uppercase tracking-widest text-silver hover:bg-secondary transition-colors"
+            href="tel:+48505797300"
+            className="inline-flex items-center gap-2 px-3 py-2 sm:px-5 sm:py-2.5 rounded-md border-silver text-xs sm:text-sm uppercase tracking-widest text-silver hover:bg-secondary transition-colors"
           >
             Umów termin
           </a>
