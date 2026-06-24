@@ -115,10 +115,6 @@ function Index() {
 
         <div className="relative max-w-7xl mx-auto px-6 py-32 w-full">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-silver text-xs uppercase tracking-[0.3em] text-silver mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-silver" />
-              Premium Car Detailing
-            </div>
             <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] mb-8">
               <span className="text-silver">ODPICUJEMY</span>
               <br />
