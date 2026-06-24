@@ -80,9 +80,9 @@ function Index() {
     <div className="min-h-screen text-foreground overflow-x-hidden">
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border">
-        <div className="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 h-40 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
-            <Logo className="h-24 w-auto" />
+            <Logo className="h-36 w-auto" />
           </a>
           <nav className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest text-muted-foreground">
             <a href="#uslugi" className="hover:text-foreground transition-colors">Usługi</a>
