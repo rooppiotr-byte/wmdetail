@@ -5,7 +5,8 @@ import heroCar from "@/assets/hero-car.jpg";
 import servicePolish from "@/assets/service-polish.jpg";
 import serviceInterior from "@/assets/service-interior.jpg";
 import serviceCeramic from "@/assets/service-ceramic.jpg";
-import portfolio1 from "@/assets/portfolio-1.jpg";
+import portfolio1Asset from "@/assets/portfolio-lucid.jpg.asset.json";
+const portfolio1 = portfolio1Asset.url;
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
@@ -69,7 +70,7 @@ const services = [
 ];
 
 const portfolio = [
-  { img: portfolio1, title: "Porsche 911", tag: "Korekta + Ceramika" },
+  { img: portfolio1, title: "Lucid Air", tag: "Korekta + Ceramika" },
   { img: portfolio2, title: "Mercedes AMG", tag: "Detailing kompletny" },
   { img: portfolio3, title: "BMW M3", tag: "Powłoka ceramiczna" },
   { img: portfolio4, title: "Audi RS", tag: "Detailing wnętrza" },
