@@ -74,7 +74,7 @@ const portfolio = [
   { img: portfolio1, title: "Lucid Air", tag: "Korekta + Ceramika" },
   { img: portfolio2, title: "Mercedes AMG", tag: "Detailing kompletny" },
   { img: portfolio3, title: "BMW M3", tag: "Powłoka ceramiczna" },
-  { img: portfolio4, title: "Lucid Gravity", tag: "Detailing wnętrza" },
+  { img: portfolio4, title: "Lucid Grand Touring", tag: "Detailing wnętrza" },
 ];
 
 function Index() {
