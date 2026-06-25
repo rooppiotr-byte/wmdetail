@@ -158,7 +158,7 @@ function Index() {
               </h2>
             </div>
             <p className="max-w-md text-muted-foreground">
-              Każda usługa wykonywana jest w klimatyzowanym studio z oświetleniem detailingowym, z użyciem chemii premium.
+              {"\n"}
             </p>
           </div>
 
