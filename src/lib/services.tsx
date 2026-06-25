@@ -4,6 +4,11 @@ import { ArrowRight, Phone } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BUSINESS, SITE_URL } from "@/lib/site";
+import servicePolish from "@/assets/service-polish.jpg";
+import serviceInterior from "@/assets/service-interior.jpg";
+import serviceCeramic from "@/assets/service-ceramic.jpg";
+import lucidInterior from "@/assets/lucid-interior.jpg.asset.json";
+
 
 type ServiceMeta = {
   slug: string;
