@@ -9,7 +9,8 @@ import portfolio1Asset from "@/assets/portfolio-lucid.jpg.asset.json";
 const portfolio1 = portfolio1Asset.url;
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
+import portfolio4Asset from "@/assets/lucid-interior.jpg.asset.json";
+const portfolio4 = portfolio4Asset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
