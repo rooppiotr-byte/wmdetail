@@ -71,7 +71,7 @@ const services = [
 ];
 
 const portfolio = [
-  { img: portfolio1, title: "Lucid Air", tag: "Korekta + Ceramika" },
+  { img: portfolio1, title: "Lucid Air Pure", tag: "Korekta + Ceramika" },
   { img: portfolio2, title: "Mercedes AMG", tag: "Detailing kompletny" },
   { img: portfolio3, title: "BMW M3", tag: "Powłoka ceramiczna" },
   { img: portfolio4, title: "Lucid Grand Touring", tag: "Detailing wnętrza" },
@@ -225,6 +225,7 @@ function Index() {
                   <div>
                     <p className="text-xs uppercase tracking-[0.3em] text-silver mb-2">{p.tag}</p>
                     <h3 className="font-display text-2xl font-semibold">{p.title}</h3>
+                    <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground/50 mt-2">Dąbrowa Górnicza</p>
                   </div>
                 </figcaption>
               </figure>
