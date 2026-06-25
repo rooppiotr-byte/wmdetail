@@ -122,7 +122,7 @@ function Index() {
               <span className="text-foreground">TWOJĄ FURĘ!</span>
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed mb-10">
-              Car detailing w Dąbrowie Górniczej
+              jProfesjonalny detailing samochodowy w Dąbrowie Górniczej. Oferujemy detailing wnętrza, korektę lakieru, powłoki ceramiczne, pranie tapicerki oraz kompleksową pielęgnację samochodów.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
