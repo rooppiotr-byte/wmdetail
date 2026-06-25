@@ -9,38 +9,147 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as PolitykaPrywatnosciRouteImport } from './routes/polityka-prywatnosci'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as UslugiPranieTapicerkiRouteImport } from './routes/uslugi.pranie-tapicerki'
+import { Route as UslugiPowlokiCeramiczneRouteImport } from './routes/uslugi.powloki-ceramiczne'
+import { Route as UslugiMycieDetailingoweRouteImport } from './routes/uslugi.mycie-detailingowe'
+import { Route as UslugiKorektaLakieruRouteImport } from './routes/uslugi.korekta-lakieru'
+import { Route as UslugiDetailingWnetrzaRouteImport } from './routes/uslugi.detailing-wnetrza'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PolitykaPrywatnosciRoute = PolitykaPrywatnosciRouteImport.update({
+  id: '/polityka-prywatnosci',
+  path: '/polityka-prywatnosci',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const UslugiPranieTapicerkiRoute = UslugiPranieTapicerkiRouteImport.update({
+  id: '/uslugi/pranie-tapicerki',
+  path: '/uslugi/pranie-tapicerki',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UslugiPowlokiCeramiczneRoute = UslugiPowlokiCeramiczneRouteImport.update({
+  id: '/uslugi/powloki-ceramiczne',
+  path: '/uslugi/powloki-ceramiczne',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UslugiMycieDetailingoweRoute = UslugiMycieDetailingoweRouteImport.update({
+  id: '/uslugi/mycie-detailingowe',
+  path: '/uslugi/mycie-detailingowe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UslugiKorektaLakieruRoute = UslugiKorektaLakieruRouteImport.update({
+  id: '/uslugi/korekta-lakieru',
+  path: '/uslugi/korekta-lakieru',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UslugiDetailingWnetrzaRoute = UslugiDetailingWnetrzaRouteImport.update({
+  id: '/uslugi/detailing-wnetrza',
+  path: '/uslugi/detailing-wnetrza',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/uslugi/detailing-wnetrza': typeof UslugiDetailingWnetrzaRoute
+  '/uslugi/korekta-lakieru': typeof UslugiKorektaLakieruRoute
+  '/uslugi/mycie-detailingowe': typeof UslugiMycieDetailingoweRoute
+  '/uslugi/powloki-ceramiczne': typeof UslugiPowlokiCeramiczneRoute
+  '/uslugi/pranie-tapicerki': typeof UslugiPranieTapicerkiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/uslugi/detailing-wnetrza': typeof UslugiDetailingWnetrzaRoute
+  '/uslugi/korekta-lakieru': typeof UslugiKorektaLakieruRoute
+  '/uslugi/mycie-detailingowe': typeof UslugiMycieDetailingoweRoute
+  '/uslugi/powloki-ceramiczne': typeof UslugiPowlokiCeramiczneRoute
+  '/uslugi/pranie-tapicerki': typeof UslugiPranieTapicerkiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/uslugi/detailing-wnetrza': typeof UslugiDetailingWnetrzaRoute
+  '/uslugi/korekta-lakieru': typeof UslugiKorektaLakieruRoute
+  '/uslugi/mycie-detailingowe': typeof UslugiMycieDetailingoweRoute
+  '/uslugi/powloki-ceramiczne': typeof UslugiPowlokiCeramiczneRoute
+  '/uslugi/pranie-tapicerki': typeof UslugiPranieTapicerkiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/polityka-prywatnosci'
+    | '/sitemap.xml'
+    | '/uslugi/detailing-wnetrza'
+    | '/uslugi/korekta-lakieru'
+    | '/uslugi/mycie-detailingowe'
+    | '/uslugi/powloki-ceramiczne'
+    | '/uslugi/pranie-tapicerki'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/polityka-prywatnosci'
+    | '/sitemap.xml'
+    | '/uslugi/detailing-wnetrza'
+    | '/uslugi/korekta-lakieru'
+    | '/uslugi/mycie-detailingowe'
+    | '/uslugi/powloki-ceramiczne'
+    | '/uslugi/pranie-tapicerki'
+  id:
+    | '__root__'
+    | '/'
+    | '/polityka-prywatnosci'
+    | '/sitemap.xml'
+    | '/uslugi/detailing-wnetrza'
+    | '/uslugi/korekta-lakieru'
+    | '/uslugi/mycie-detailingowe'
+    | '/uslugi/powloki-ceramiczne'
+    | '/uslugi/pranie-tapicerki'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PolitykaPrywatnosciRoute: typeof PolitykaPrywatnosciRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  UslugiDetailingWnetrzaRoute: typeof UslugiDetailingWnetrzaRoute
+  UslugiKorektaLakieruRoute: typeof UslugiKorektaLakieruRoute
+  UslugiMycieDetailingoweRoute: typeof UslugiMycieDetailingoweRoute
+  UslugiPowlokiCeramiczneRoute: typeof UslugiPowlokiCeramiczneRoute
+  UslugiPranieTapicerkiRoute: typeof UslugiPranieTapicerkiRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/polityka-prywatnosci': {
+      id: '/polityka-prywatnosci'
+      path: '/polityka-prywatnosci'
+      fullPath: '/polityka-prywatnosci'
+      preLoaderRoute: typeof PolitykaPrywatnosciRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,12 +157,64 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/uslugi/pranie-tapicerki': {
+      id: '/uslugi/pranie-tapicerki'
+      path: '/uslugi/pranie-tapicerki'
+      fullPath: '/uslugi/pranie-tapicerki'
+      preLoaderRoute: typeof UslugiPranieTapicerkiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/uslugi/powloki-ceramiczne': {
+      id: '/uslugi/powloki-ceramiczne'
+      path: '/uslugi/powloki-ceramiczne'
+      fullPath: '/uslugi/powloki-ceramiczne'
+      preLoaderRoute: typeof UslugiPowlokiCeramiczneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/uslugi/mycie-detailingowe': {
+      id: '/uslugi/mycie-detailingowe'
+      path: '/uslugi/mycie-detailingowe'
+      fullPath: '/uslugi/mycie-detailingowe'
+      preLoaderRoute: typeof UslugiMycieDetailingoweRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/uslugi/korekta-lakieru': {
+      id: '/uslugi/korekta-lakieru'
+      path: '/uslugi/korekta-lakieru'
+      fullPath: '/uslugi/korekta-lakieru'
+      preLoaderRoute: typeof UslugiKorektaLakieruRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/uslugi/detailing-wnetrza': {
+      id: '/uslugi/detailing-wnetrza'
+      path: '/uslugi/detailing-wnetrza'
+      fullPath: '/uslugi/detailing-wnetrza'
+      preLoaderRoute: typeof UslugiDetailingWnetrzaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PolitykaPrywatnosciRoute: PolitykaPrywatnosciRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  UslugiDetailingWnetrzaRoute: UslugiDetailingWnetrzaRoute,
+  UslugiKorektaLakieruRoute: UslugiKorektaLakieruRoute,
+  UslugiMycieDetailingoweRoute: UslugiMycieDetailingoweRoute,
+  UslugiPowlokiCeramiczneRoute: UslugiPowlokiCeramiczneRoute,
+  UslugiPranieTapicerkiRoute: UslugiPranieTapicerkiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
