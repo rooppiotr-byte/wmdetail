@@ -31,7 +31,7 @@ export const ALL_SERVICES: ServiceMeta[] = [
     h1: "Detailing wnętrza samochodu — Dąbrowa Górnicza",
     intro: "Kompleksowe czyszczenie kabiny: tapicerka, skóra, plastiki, podsufitka i wykończenia. Dezynfekcja ozonem usuwa nieprzyjemne zapachy.",
     bullets: ["Pranie tapicerki materiałowej i welurowej", "Czyszczenie i pielęgnacja skóry", "Detailing plastików i wykończeń", "Dezynfekcja ozonem", "Mycie szyb od wewnątrz"],
-    image: "/__l5e/assets-v1/4a9c1939-7df8-4b5e-b29f-f4b1c3e93661/lucid-interior.jpg",
+    image: lucidInterior.url,
     alt: "Detailing wnętrza Lucid Air w studio WM Detail w Dąbrowie Górniczej",
   },
   {
@@ -42,7 +42,7 @@ export const ALL_SERVICES: ServiceMeta[] = [
     h1: "Korekta lakieru samochodowego — Dąbrowa Górnicza",
     intro: "Maszynowa korekta lakieru przywraca głębię koloru i lustrzane wykończenie. Usuwamy rysy, hologramy, swirle i utlenienie.",
     bullets: ["Pomiar grubości powłoki lakieru", "Jedno- lub wieloetapowa korekta", "Usuwanie rys i hologramów", "Lustrzane wykończenie", "Przygotowanie pod powłokę ceramiczną"],
-    image: "/src/assets/service-polish.jpg",
+    image: servicePolish,
     alt: "Korekta lakieru maszynową polerką — WM Detail Dąbrowa Górnicza",
   },
   {
@@ -53,7 +53,7 @@ export const ALL_SERVICES: ServiceMeta[] = [
     h1: "Powłoki ceramiczne na lakier — Dąbrowa Górnicza",
     intro: "Profesjonalna aplikacja powłok ceramicznych i kwarcowych. Lakier zyskuje hydrofobowość, odporność na zabrudzenia i głębię koloru na lata.",
     bullets: ["Przygotowanie i korekta lakieru", "Aplikacja powłoki 2H–10H", "Hydrofobowość i efekt samoczyszczenia", "Ochrona przed UV i ptasimi odchodami", "Gwarancja trwałości"],
-    image: "/src/assets/service-ceramic.jpg",
+    image: serviceCeramic,
     alt: "Aplikacja powłoki ceramicznej na lakier samochodu — WM Detail",
   },
   {
@@ -64,7 +64,7 @@ export const ALL_SERVICES: ServiceMeta[] = [
     h1: "Pranie tapicerki samochodowej — Dąbrowa Górnicza",
     intro: "Ekstrakcyjne pranie tapicerki usuwa kurz, plamy i alergeny. Wnętrze odzyskuje świeżość, a foteliki dziecięce wracają do stanu fabrycznego.",
     bullets: ["Pranie foteli i kanapy", "Pranie podsufitki", "Pranie dywaników i wykładziny", "Usuwanie plam organicznych", "Neutralizacja zapachów"],
-    image: "/src/assets/service-interior.jpg",
+    image: serviceInterior,
     alt: "Pranie tapicerki samochodowej w WM Detail Dąbrowa Górnicza",
   },
   {
@@ -75,7 +75,7 @@ export const ALL_SERVICES: ServiceMeta[] = [
     h1: "Mycie detailingowe samochodu — Dąbrowa Górnicza",
     intro: "Pełne, bezpieczne mycie samochodu metodą detailingową: pre wash, dwa wiadra, opony, felgi, wnęki i bezpieczne osuszanie microfibrą.",
     bullets: ["Pre wash i piana aktywna", "Mycie metodą dwóch wiader", "Opony, felgi i wnęki", "Mycie szyb i listew", "Bezpieczne osuszanie"],
-    image: "/src/assets/service-polish.jpg",
+    image: servicePolish,
     alt: "Mycie detailingowe samochodu w studio WM Detail",
   },
 ];
