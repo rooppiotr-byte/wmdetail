@@ -122,7 +122,7 @@ function Index() {
               <span className="text-foreground">TWOJĄ FURĘ!</span>
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed mb-10">
-              Studio detailingu, w którym każdy detal ma znaczenie. Korekta lakieru, powłoki ceramiczne i pełna pielęgnacja Twojego auta.
+              Car detailing w Dąbrowie Górniczej
             </p>
             <div className="flex flex-wrap gap-4">
               <a
