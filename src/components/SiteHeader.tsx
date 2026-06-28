@@ -21,15 +21,25 @@ export function SiteHeader() {
           <Link to="/" hash="realizacje" className="hover:text-foreground transition-colors">Realizacje</Link>
           <Link to="/" hash="kontakt" className="hover:text-foreground transition-colors">Kontakt</Link>
         </nav>
-        <a
-          href={BUSINESS.phoneHref}
-          aria-label={`Zadzwoń ${BUSINESS.phone}`}
-          className="inline-flex items-center gap-2 px-3 py-2 sm:px-5 sm:py-2.5 rounded-md border-silver text-xs sm:text-sm uppercase tracking-widest text-silver hover:bg-secondary transition-colors"
-        >
-          <Phone className="w-4 h-4" aria-hidden="true" />
-          <span className="hidden sm:inline">{BUSINESS.phone}</span>
-          <span className="sm:hidden">Zadzwoń</span>
-        </a>
+        <div className="flex items-center gap-3">
+          <a
+            href={BUSINESS.phoneHref}
+            aria-label={`Zadzwoń ${BUSINESS.phone}`}
+            className="hidden sm:inline-flex items-center gap-2 px-3 py-2 text-sm uppercase tracking-widest text-silver hover:text-foreground transition-colors"
+          >
+            <Phone className="w-4 h-4" aria-hidden="true" />
+            <span>{BUSINESS.phone}</span>
+          </a>
+          <a
+            href={BUSINESS.phoneHref}
+            aria-label={`Umów termin — zadzwoń ${BUSINESS.phone}`}
+            className="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-md bg-foreground text-background text-xs sm:text-sm font-semibold uppercase tracking-widest hover:bg-silver-bright transition-colors shadow-silver-glow"
+          >
+            <Phone className="w-4 h-4" aria-hidden="true" />
+            <span className="hidden sm:inline">Umów termin</span>
+            <span className="sm:hidden">Zadzwoń</span>
+          </a>
+        </div>
       </div>
     </header>
   );
