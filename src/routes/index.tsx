@@ -147,23 +147,17 @@ function Index() {
 
             <div className="grid md:grid-cols-2 gap-6">
               {services.map((s) => (
-                <article key={s.title} className="group relative overflow-hidden rounded-xl bg-graphite border-silver shadow-elegant">
-                  <div className="relative h-64 overflow-hidden">
-                    <img src={s.img} alt={s.alt} loading="lazy" width={1280} height={720} className="w-full h-full object-cover opacity-70 group-hover:scale-105 group-hover:opacity-90 transition-all duration-700" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
-                    <div className="absolute top-6 left-6 w-12 h-12 rounded-md bg-background/80 backdrop-blur border-silver flex items-center justify-center">
-                      <s.icon className="w-5 h-5 text-silver" aria-hidden="true" />
-                    </div>
+                <article key={s.title} className="group relative overflow-hidden rounded-xl bg-graphite border-silver shadow-elegant p-8">
+                  <div className="w-12 h-12 rounded-md bg-background/80 border-silver flex items-center justify-center mb-6">
+                    <s.icon className="w-5 h-5 text-silver" aria-hidden="true" />
                   </div>
-                  <div className="p-8">
-                    <h3 className="font-display text-2xl font-semibold mb-3">
-                      <Link to={s.to} className="hover:text-silver transition-colors">{s.title}</Link>
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">{s.desc}</p>
-                    <Link to={s.to} className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-silver hover:text-foreground">
-                      Dowiedz się więcej <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                    </Link>
-                  </div>
+                  <h3 className="font-display text-2xl font-semibold mb-3">
+                    <Link to={s.to} className="hover:text-silver transition-colors">{s.title}</Link>
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{s.desc}</p>
+                  <Link to={s.to} className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-silver hover:text-foreground">
+                    Dowiedz się więcej <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </Link>
                 </article>
               ))}
             </div>
