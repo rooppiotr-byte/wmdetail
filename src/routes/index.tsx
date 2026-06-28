@@ -80,7 +80,7 @@ const services = [
 
 const portfolio = [
   { img: portfolio1, title: "Lucid Air Pure", tag: "Korekta + Ceramika", alt: "Lucid Air Pure po korekcie lakieru i powłoce ceramicznej w WM Detail" },
-  { img: portfolio2, title: "Mercedes AMG", tag: "Detailing kompletny", alt: "Mercedes AMG po kompletnym detailingu w Dąbrowie Górniczej" },
+  { img: portfolio2, title: "Lucid Air Pure", tag: "Detailing kompletny", alt: "Lucid Air Pure po kompletnym detailingu w Dąbrowie Górniczej" },
   { img: portfolio3, title: "BMW M3", tag: "Powłoka ceramiczna", alt: "BMW M3 z powłoką ceramiczną — realizacja WM Detail" },
   { img: portfolio4, title: "Lucid Grand Touring", tag: "Detailing wnętrza", alt: "Lucid Grand Touring po detailingu wnętrza" },
 ];
