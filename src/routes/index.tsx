@@ -207,6 +207,11 @@ function Index() {
                 </figure>
               ))}
             </div>
+            <div className="mt-12 text-center">
+              <a href="#kontakt" className="inline-flex items-center gap-3 px-8 py-4 border-silver rounded-md font-semibold uppercase tracking-widest text-sm text-silver hover:bg-secondary transition-colors">
+                <Phone className="w-4 h-4" aria-hidden="true" /> Umów termin
+              </a>
+            </div>
           </div>
         </section>
 
