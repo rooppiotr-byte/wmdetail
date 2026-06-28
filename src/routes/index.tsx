@@ -176,6 +176,11 @@ function Index() {
                 </article>
               ))}
             </div>
+            <div className="mt-12 text-center">
+              <a href="#kontakt" className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-md font-semibold uppercase tracking-widest text-sm hover:bg-silver-bright transition-colors shadow-silver-glow">
+                <Phone className="w-4 h-4" aria-hidden="true" /> Umów termin
+              </a>
+            </div>
           </div>
         </section>
 
