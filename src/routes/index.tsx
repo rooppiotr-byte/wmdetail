@@ -6,7 +6,8 @@ import serviceInterior from "@/assets/service-interior.jpg";
 import serviceCeramic from "@/assets/service-ceramic.jpg";
 import portfolio1Asset from "@/assets/portfolio-lucid.jpg.asset.json";
 import portfolio2Asset from "@/assets/lucid-pure.jpg.asset.json";
-import portfolio3 from "@/assets/portfolio-3.jpg";
+import portfolio3Asset from "@/assets/mazda3.jpg.asset.json";
+const portfolio3 = portfolio3Asset.url;
 import portfolio4Asset from "@/assets/lucid-interior.jpg.asset.json";
 const portfolio2 = portfolio2Asset.url;
 import { SiteHeader } from "@/components/SiteHeader";
@@ -81,7 +82,7 @@ const services = [
 const portfolio = [
   { img: portfolio1, title: "Lucid Air Pure", tag: "Korekta + Ceramika", alt: "Lucid Air Pure po korekcie lakieru i powłoce ceramicznej w WM Detail" },
   { img: portfolio2, title: "Lucid Air Pure", tag: "Detailing kompletny", alt: "Lucid Air Pure po kompletnym detailingu w Dąbrowie Górniczej" },
-  { img: portfolio3, title: "BMW M3", tag: "Powłoka ceramiczna", alt: "BMW M3 z powłoką ceramiczną — realizacja WM Detail" },
+  { img: portfolio3, title: "Mazda 3", tag: "Detailing zewnętrzny", alt: "Mazda 3 po detailingu zewnętrznym — realizacja WM Detail" },
   { img: portfolio4, title: "Lucid Grand Touring", tag: "Detailing wnętrza", alt: "Lucid Grand Touring po detailingu wnętrza" },
 ];
 
