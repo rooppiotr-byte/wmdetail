@@ -286,9 +286,39 @@ function Index() {
             </div>
           </div>
         </section>
+
+        {/* OBSZAR DZIAŁANIA */}
+        <section id="obszar" className="relative py-24 px-6 bg-graphite" aria-labelledby="obszar-heading">
+          <div className="max-w-5xl mx-auto text-center">
+            <p className="text-xs uppercase tracking-[0.4em] text-silver mb-4">— Obszar działania</p>
+            <h2 id="obszar-heading" className="font-display text-4xl sm:text-5xl font-bold mb-6">
+              Studio w <span className="text-silver">Dąbrowie Górniczej</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
+              Obsługujemy klientów z Dąbrowy Górniczej i całego Zagłębia — przyjeżdżają do nas również z Sosnowca, Będzina, Czeladzi, Katowic i Mysłowic.
+            </p>
+            <ul className="flex flex-wrap justify-center gap-3 mb-10" aria-label="Miasta, które obsługujemy">
+              {["Dąbrowa Górnicza","Sosnowiec","Będzin","Czeladź","Katowice","Mysłowice"].map((c) => (
+                <li key={c} className="px-4 py-2 rounded-md border-silver text-sm uppercase tracking-widest text-silver">{c}</li>
+              ))}
+            </ul>
+            <a href={BUSINESS.phoneHref} className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-md font-semibold uppercase tracking-widest text-sm hover:bg-silver-bright transition-colors shadow-silver-glow">
+              <Phone className="w-4 h-4" aria-hidden="true" /> Zadzwoń teraz
+            </a>
+          </div>
+        </section>
       </main>
 
       <SiteFooter />
+
+      {/* Mobile sticky call bar */}
+      <a
+        href={BUSINESS.phoneHref}
+        aria-label={`Zadzwoń ${BUSINESS.phone}`}
+        className="md:hidden fixed bottom-4 inset-x-4 z-50 inline-flex items-center justify-center gap-3 px-6 py-4 bg-foreground text-background rounded-md font-semibold uppercase tracking-widest text-sm shadow-silver-glow"
+      >
+        <Phone className="w-4 h-4" aria-hidden="true" /> Zadzwoń — umów termin
+      </a>
     </div>
   );
 }
