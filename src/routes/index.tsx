@@ -121,16 +121,19 @@ function Index() {
 
           <div className="relative max-w-7xl mx-auto px-6 py-32 w-full">
             <div className="max-w-3xl">
-              <h1 id="hero-heading" className="text-xs uppercase tracking-[0.4em] text-silver mb-6">
-                Detailing samochodowy Dąbrowa Górnicza
-              </h1>
-              <p className="font-display text-6xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] mb-8" aria-hidden="false">
+              <p className="text-xs uppercase tracking-[0.4em] text-silver mb-6">
+                Studio detailingu — Dąbrowa Górnicza
+              </p>
+              <p className="font-display text-6xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] mb-6" aria-hidden="false">
                 <span className="text-silver">ODPICUJEMY</span>
                 <br />
                 <span className="text-foreground">TWOJĄ FURĘ!</span>
               </p>
+              <h1 id="hero-heading" className="font-display text-2xl sm:text-3xl font-semibold text-foreground/90 mb-6">
+                Detailing samochodowy Dąbrowa Górnicza
+              </h1>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed mb-10">
-                {DESCRIPTION}
+                Profesjonalny detailing samochodowy w Dąbrowie Górniczej — detailing wnętrza, korekta lakieru, powłoki ceramiczne i pranie tapicerki. Kompleksowa pielęgnacja Twojego auta w jednym studio.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="#uslugi" className="group inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-md font-semibold uppercase tracking-widest text-sm hover:bg-silver-bright transition-colors shadow-silver-glow">
