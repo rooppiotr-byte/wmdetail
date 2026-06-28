@@ -39,6 +39,8 @@ export function SiteFooter() {
           <h2 className="text-xs uppercase tracking-[0.3em] text-silver mb-3">Linki</h2>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li><a href={BUSINESS.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@wmdetail.dg" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">TikTok</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61590402852365&ref=PROFILE_EDIT_xav_ig_profile_page_web" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">Facebook</a></li>
             <li><a href={BUSINESS.maps} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">Google Maps</a></li>
             <li><Link to="/polityka-prywatnosci" className="hover:text-foreground">Polityka prywatności</Link></li>
           </ul>
