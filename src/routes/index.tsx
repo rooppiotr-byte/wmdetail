@@ -42,7 +42,19 @@ const localBusinessJsonLd = {
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "08:00", closes: "16:00" },
     { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "14:00" },
   ],
-  sameAs: [BUSINESS.instagram],
+  areaServed: [
+    { "@type": "City", name: "Dąbrowa Górnicza" },
+    { "@type": "City", name: "Sosnowiec" },
+    { "@type": "City", name: "Będzin" },
+    { "@type": "City", name: "Czeladź" },
+    { "@type": "City", name: "Katowice" },
+    { "@type": "City", name: "Mysłowice" },
+  ],
+  sameAs: [
+    BUSINESS.instagram,
+    "https://www.tiktok.com/@wmdetail.dg",
+    "https://www.facebook.com/profile.php?id=61590402852365",
+  ],
 };
 
 export const Route = createFileRoute("/")({
