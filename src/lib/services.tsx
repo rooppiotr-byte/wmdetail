@@ -92,9 +92,6 @@ export function ServicePageLayout({ slug, children }: { slug: string; children?:
           <h1 className="font-display text-4xl sm:text-5xl font-bold mb-6">{svc.h1}</h1>
           <p className="text-lg text-muted-foreground mb-10">{svc.intro}</p>
 
-          <div className="rounded-xl overflow-hidden border-silver shadow-elegant mb-10">
-            <img src={svc.image} alt={svc.alt} loading="lazy" width={1280} height={720} className="w-full h-auto object-cover" />
-          </div>
 
           <h2 className="font-display text-2xl font-semibold mb-4">Co obejmuje usługa</h2>
           <ul className="space-y-2 text-muted-foreground mb-10 list-disc list-inside">
