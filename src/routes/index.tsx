@@ -42,7 +42,19 @@ const localBusinessJsonLd = {
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "08:00", closes: "16:00" },
     { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "14:00" },
   ],
-  sameAs: [BUSINESS.instagram],
+  areaServed: [
+    { "@type": "City", name: "Dąbrowa Górnicza" },
+    { "@type": "City", name: "Sosnowiec" },
+    { "@type": "City", name: "Będzin" },
+    { "@type": "City", name: "Czeladź" },
+    { "@type": "City", name: "Katowice" },
+    { "@type": "City", name: "Mysłowice" },
+  ],
+  sameAs: [
+    BUSINESS.instagram,
+    "https://www.tiktok.com/@wmdetail.dg",
+    "https://www.facebook.com/profile.php?id=61590402852365",
+  ],
 };
 
 export const Route = createFileRoute("/")({
@@ -109,16 +121,19 @@ function Index() {
 
           <div className="relative max-w-7xl mx-auto px-6 py-32 w-full">
             <div className="max-w-3xl">
-              <h1 id="hero-heading" className="text-xs uppercase tracking-[0.4em] text-silver mb-6">
-                Detailing samochodowy Dąbrowa Górnicza
-              </h1>
-              <p className="font-display text-6xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] mb-8" aria-hidden="false">
+              <p className="text-xs uppercase tracking-[0.4em] text-silver mb-6">
+                Studio detailingu — Dąbrowa Górnicza
+              </p>
+              <p className="font-display text-6xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] mb-6" aria-hidden="false">
                 <span className="text-silver">ODPICUJEMY</span>
                 <br />
                 <span className="text-foreground">TWOJĄ FURĘ!</span>
               </p>
+              <h1 id="hero-heading" className="font-display text-2xl sm:text-3xl font-semibold text-foreground/90 mb-6">
+                Detailing samochodowy Dąbrowa Górnicza
+              </h1>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed mb-10">
-                {DESCRIPTION}
+                Profesjonalny detailing samochodowy w Dąbrowie Górniczej — detailing wnętrza, korekta lakieru, powłoki ceramiczne i pranie tapicerki. Kompleksowa pielęgnacja Twojego auta w jednym studio.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="#uslugi" className="group inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-md font-semibold uppercase tracking-widest text-sm hover:bg-silver-bright transition-colors shadow-silver-glow">
@@ -161,6 +176,11 @@ function Index() {
                 </article>
               ))}
             </div>
+            <div className="mt-12 text-center">
+              <a href="#kontakt" className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-md font-semibold uppercase tracking-widest text-sm hover:bg-silver-bright transition-colors shadow-silver-glow">
+                <Phone className="w-4 h-4" aria-hidden="true" /> Umów termin
+              </a>
+            </div>
           </div>
         </section>
 
@@ -186,6 +206,11 @@ function Index() {
                   </figcaption>
                 </figure>
               ))}
+            </div>
+            <div className="mt-12 text-center">
+              <a href="#kontakt" className="inline-flex items-center gap-3 px-8 py-4 border-silver rounded-md font-semibold uppercase tracking-widest text-sm text-silver hover:bg-secondary transition-colors">
+                <Phone className="w-4 h-4" aria-hidden="true" /> Umów termin
+              </a>
             </div>
           </div>
         </section>
@@ -271,9 +296,39 @@ function Index() {
             </div>
           </div>
         </section>
+
+        {/* OBSZAR DZIAŁANIA */}
+        <section id="obszar" className="relative py-24 px-6 bg-graphite" aria-labelledby="obszar-heading">
+          <div className="max-w-5xl mx-auto text-center">
+            <p className="text-xs uppercase tracking-[0.4em] text-silver mb-4">— Obszar działania</p>
+            <h2 id="obszar-heading" className="font-display text-4xl sm:text-5xl font-bold mb-6">
+              Studio w <span className="text-silver">Dąbrowie Górniczej</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
+              Obsługujemy klientów z Dąbrowy Górniczej i całego Zagłębia — przyjeżdżają do nas również z Sosnowca, Będzina, Czeladzi, Katowic i Mysłowic.
+            </p>
+            <ul className="flex flex-wrap justify-center gap-3 mb-10" aria-label="Miasta, które obsługujemy">
+              {["Dąbrowa Górnicza","Sosnowiec","Będzin","Czeladź","Katowice","Mysłowice"].map((c) => (
+                <li key={c} className="px-4 py-2 rounded-md border-silver text-sm uppercase tracking-widest text-silver">{c}</li>
+              ))}
+            </ul>
+            <a href={BUSINESS.phoneHref} className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-md font-semibold uppercase tracking-widest text-sm hover:bg-silver-bright transition-colors shadow-silver-glow">
+              <Phone className="w-4 h-4" aria-hidden="true" /> Zadzwoń teraz
+            </a>
+          </div>
+        </section>
       </main>
 
       <SiteFooter />
+
+      {/* Mobile sticky call bar */}
+      <a
+        href={BUSINESS.phoneHref}
+        aria-label={`Zadzwoń ${BUSINESS.phone}`}
+        className="md:hidden fixed bottom-4 inset-x-4 z-50 inline-flex items-center justify-center gap-3 px-6 py-4 bg-foreground text-background rounded-md font-semibold uppercase tracking-widest text-sm shadow-silver-glow"
+      >
+        <Phone className="w-4 h-4" aria-hidden="true" /> Zadzwoń — umów termin
+      </a>
     </div>
   );
 }
