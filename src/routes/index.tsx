@@ -1,22 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Sparkles, Droplets, Sofa, Shield, MapPin, Phone, Mail, Instagram, ArrowRight, Clock } from "lucide-react";
-import heroCarAsset from "@/assets/detailing-samochodu-lucid-air.jpg";
-const heroCar = heroCarAsset.url;
+import heroCar from "@/assets/detailing-samochodu-lucid-air.jpg";
 import servicePolish from "@/assets/lucid-air-pure-detailing-kompleksowy.jpg";
 import serviceInterior from "@/assets/lucyna-gt-srodek-nastrone.jpg";
 import serviceCeramic from "@/assets/lucid-air-detailing-korekta-ceramika.jpg";
-import portfolio1Asset from "@/assets/lucid-air-detailing-korekta-ceramika.jpg";
-import portfolio2Asset from "@/assets/lucid-air-pure-detailing-kompleksowy.jpg";
-import portfolio3Asset from "@/assets/mazda-3-mycie-detailingowe.jpg";
-const portfolio3 = portfolio3Asset.url;
-import portfolio4Asset from "@/assets/lucyna-gt-srodek-nastrone.jpg";
-const portfolio2 = portfolio2Asset.url;
+import portfolio1 from "@/assets/lucid-air-detailing-korekta-ceramika.jpg";
+import portfolio2 from "@/assets/lucid-air-pure-detailing-kompleksowy.jpg";
+import portfolio3 from "@/assets/mazda-3-mycie-detailingowe.jpg";
+import portfolio4 from "@/assets/lucyna-gt-srodek-nastrone.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BUSINESS, SITE_URL } from "@/lib/site";
 
-const portfolio1 = portfolio1Asset.url;
-const portfolio4 = portfolio4Asset.url;
 
 const TITLE = "WM Detail Car Detailing | Detailing samochodowy Dąbrowa Górnicza";
 const DESCRIPTION = "Profesjonalny detailing samochodowy w Dąbrowie Górniczej. Detailing wnętrza, korekta lakieru, powłoki ceramiczne, pranie tapicerki oraz kompleksowa pielęgnacja samochodów.";
