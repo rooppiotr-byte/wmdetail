@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Phone } from "lucide-react";
-import logoAsset from "@/assets/wm-detail-logo.png.asset.json";
+import logoAsset from "@/assets/wmdetail-logo.png";
 import { BUSINESS } from "@/lib/site";
 
 export function SiteHeader() {
@@ -9,7 +9,7 @@ export function SiteHeader() {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" aria-label="WM Detail Car Detailing — strona główna" className="flex items-center gap-3">
           <img
-            src={logoAsset.url}
+            src={logo}
             alt="WM Detail Car Detailing — logo"
             className="h-9 sm:h-12 w-auto"
             width={1641}

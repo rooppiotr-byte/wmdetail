@@ -4,10 +4,10 @@ import { ArrowRight, Phone } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BUSINESS, SITE_URL } from "@/lib/site";
-import servicePolish from "@/assets/service-polish.jpg";
-import serviceInterior from "@/assets/service-interior.jpg";
-import serviceCeramic from "@/assets/service-ceramic.jpg";
-import lucidInterior from "@/assets/lucid-interior.jpg.asset.json";
+import servicePolish from "@/assets/lucid-air-pure-detailing-kompleksowy.jpg";
+import serviceInterior from "@/assets/lucyna-gt-srodek-nastrone.jpg";
+import serviceCeramic from "@/assets/lucid-air-detailing-korekta-ceramika.jpg";
+import lucidInterior from "@/assets/lucyna-gt-srodek-nastrone.jpg";
 
 
 type ServiceMeta = {
