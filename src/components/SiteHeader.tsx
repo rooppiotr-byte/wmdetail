@@ -9,7 +9,7 @@ export function SiteHeader() {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" aria-label="WM Detail Car Detailing — strona główna" className="flex items-center gap-3">
           <img
-            src={logo}
+            src={logoAsset}
             alt="WM Detail Car Detailing — logo"
             className="h-9 sm:h-12 w-auto"
             width={1641}

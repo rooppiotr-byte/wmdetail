@@ -8,7 +8,7 @@ export function SiteFooter() {
       <div className="max-w-7xl mx-auto grid gap-10 md:grid-cols-4">
         <div className="space-y-3">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="WM Detail Car Detailing — logo" className="h-8 w-auto" width={1641} height={405} />
+            <img src={logoAsset} alt="WM Detail Car Detailing — logo" className="h-8 w-auto"  />
           </div>
           <p className="font-display tracking-widest text-silver text-sm">CAR DETAILING</p>
           <p className="text-sm text-muted-foreground">Detailing samochodowy Dąbrowa Górnicza</p>
