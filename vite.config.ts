@@ -1,30 +1,15 @@
-// Fully static build for shared hosting (Home.pl).
-// All routes listed in `tanstackStart.pages` are prerendered to HTML at build time.
-// Inside the Lovable sandbox the Cloudflare preset is force-pinned by the wrapper,
-// so the static output below only takes effect when building locally on your machine.
+// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
+// or the app will break with duplicate plugins:
+//   - tanstackStart, viteReact, tailwindcss, tsConfigPaths, nitro (build-only using cloudflare as a default target),
+//     componentTagger (dev-only), VITE_* env injection, @ path alias, React/TanStack dedupe,
+//     error logger plugins, and sandbox detection (port/host/strictPort).
+// You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   tanstackStart: {
-    // Globally enable prerendering and crawl <Link>s for any extra pages.
-    prerender: {
-      enabled: true,
-      crawlLinks: true,
-    },
-    // Explicit list of indexable routes — guarantees each gets its own .html file.
-    pages: [
-      { path: "/", prerender: { enabled: true, crawlLinks: true } },
-      { path: "/polityka-prywatnosci", prerender: { enabled: true } },
-      { path: "/uslugi/detailing-wnetrza", prerender: { enabled: true } },
-      { path: "/uslugi/korekta-lakieru", prerender: { enabled: true } },
-      { path: "/uslugi/powloki-ceramiczne", prerender: { enabled: true } },
-      { path: "/uslugi/pranie-tapicerki", prerender: { enabled: true } },
-      { path: "/uslugi/mycie-detailingowe", prerender: { enabled: true } },
-    ],
-  },
-  // Nitro static preset → outputs plain HTML + assets into ./dist, no server required.
-  nitro: {
-    preset: "static",
-    output: { dir: "dist", publicDir: "dist" },
+    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
+    // nitro/vite builds from this
+    server: { entry: "server" },
   },
 });

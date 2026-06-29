@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PolitykaPrywatnosciRouteImport } from './routes/polityka-prywatnosci'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as UslugiPranieTapicerkiRouteImport } from './routes/uslugi.pranie-tapicerki'
@@ -17,6 +18,11 @@ import { Route as UslugiMycieDetailingoweRouteImport } from './routes/uslugi.myc
 import { Route as UslugiKorektaLakieruRouteImport } from './routes/uslugi.korekta-lakieru'
 import { Route as UslugiDetailingWnetrzaRouteImport } from './routes/uslugi.detailing-wnetrza'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PolitykaPrywatnosciRoute = PolitykaPrywatnosciRouteImport.update({
   id: '/polityka-prywatnosci',
   path: '/polityka-prywatnosci',
@@ -56,6 +62,7 @@ const UslugiDetailingWnetrzaRoute = UslugiDetailingWnetrzaRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/uslugi/detailing-wnetrza': typeof UslugiDetailingWnetrzaRoute
   '/uslugi/korekta-lakieru': typeof UslugiKorektaLakieruRoute
   '/uslugi/mycie-detailingowe': typeof UslugiMycieDetailingoweRoute
@@ -65,6 +72,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/uslugi/detailing-wnetrza': typeof UslugiDetailingWnetrzaRoute
   '/uslugi/korekta-lakieru': typeof UslugiKorektaLakieruRoute
   '/uslugi/mycie-detailingowe': typeof UslugiMycieDetailingoweRoute
@@ -75,6 +83,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/uslugi/detailing-wnetrza': typeof UslugiDetailingWnetrzaRoute
   '/uslugi/korekta-lakieru': typeof UslugiKorektaLakieruRoute
   '/uslugi/mycie-detailingowe': typeof UslugiMycieDetailingoweRoute
@@ -86,6 +95,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/polityka-prywatnosci'
+    | '/sitemap.xml'
     | '/uslugi/detailing-wnetrza'
     | '/uslugi/korekta-lakieru'
     | '/uslugi/mycie-detailingowe'
@@ -95,6 +105,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/polityka-prywatnosci'
+    | '/sitemap.xml'
     | '/uslugi/detailing-wnetrza'
     | '/uslugi/korekta-lakieru'
     | '/uslugi/mycie-detailingowe'
@@ -104,6 +115,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/polityka-prywatnosci'
+    | '/sitemap.xml'
     | '/uslugi/detailing-wnetrza'
     | '/uslugi/korekta-lakieru'
     | '/uslugi/mycie-detailingowe'
@@ -114,6 +126,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PolitykaPrywatnosciRoute: typeof PolitykaPrywatnosciRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   UslugiDetailingWnetrzaRoute: typeof UslugiDetailingWnetrzaRoute
   UslugiKorektaLakieruRoute: typeof UslugiKorektaLakieruRoute
   UslugiMycieDetailingoweRoute: typeof UslugiMycieDetailingoweRoute
@@ -123,6 +136,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/polityka-prywatnosci': {
       id: '/polityka-prywatnosci'
       path: '/polityka-prywatnosci'
@@ -178,6 +198,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PolitykaPrywatnosciRoute: PolitykaPrywatnosciRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   UslugiDetailingWnetrzaRoute: UslugiDetailingWnetrzaRoute,
   UslugiKorektaLakieruRoute: UslugiKorektaLakieruRoute,
   UslugiMycieDetailingoweRoute: UslugiMycieDetailingoweRoute,
