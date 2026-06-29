@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Sparkles, Droplets, Sofa, Shield, MapPin, Phone, Mail, Instagram, ArrowRight, Clock } from "lucide-react";
-import heroCar from "@/assets/hero-car.jpg";
+import heroCarAsset from "@/assets/hero-lucid.jpg.asset.json";
+const heroCar = heroCarAsset.url;
 import servicePolish from "@/assets/service-polish.jpg";
 import serviceInterior from "@/assets/service-interior.jpg";
 import serviceCeramic from "@/assets/service-ceramic.jpg";
