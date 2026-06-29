@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Phone } from "lucide-react";
-import logoAsset from "@/assets/wmdetail-logo.png";
+import logoAsset from "@/assets/wm-detail-logo.png";
 import { BUSINESS } from "@/lib/site";
 
 export function SiteHeader() {
