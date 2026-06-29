@@ -25,19 +25,10 @@ export function SiteHeader() {
           <a
             href={BUSINESS.phoneHref}
             aria-label={`Zadzwoń ${BUSINESS.phone}`}
-            className="hidden sm:inline-flex items-center gap-2 px-3 py-2 text-sm uppercase tracking-widest text-silver hover:text-foreground transition-colors"
-          >
-            <Phone className="w-4 h-4" aria-hidden="true" />
-            <span>{BUSINESS.phone}</span>
-          </a>
-          <a
-            href={BUSINESS.phoneHref}
-            aria-label={`Umów termin — zadzwoń ${BUSINESS.phone}`}
             className="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-md bg-foreground text-background text-xs sm:text-sm font-semibold uppercase tracking-widest hover:bg-silver-bright transition-colors shadow-silver-glow"
           >
             <Phone className="w-4 h-4" aria-hidden="true" />
-            <span className="hidden sm:inline">Umów termin</span>
-            <span className="sm:hidden">Zadzwoń</span>
+            <span>{BUSINESS.phone}</span>
           </a>
         </div>
       </div>
