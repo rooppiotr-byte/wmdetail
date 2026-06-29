@@ -10,7 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import logoAsset from "../assets/wm-detail-logo.png.asset.json";
+import logoAsset from "../assets/wmdetail-logo.png.asset.json";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 
