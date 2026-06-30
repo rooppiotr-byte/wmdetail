@@ -1,4 +1,4 @@
-export const SITE_URL = "https://id-preview--5a559737-bcc2-47d8-a993-dd04718811fa.lovable.app";
+export const SITE_URL = "https://wmdetail.pl";
 export const BUSINESS = {
   name: "WM Detail Car Detailing",
   phone: "+48 505 797 300",
