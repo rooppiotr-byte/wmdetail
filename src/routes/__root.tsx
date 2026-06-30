@@ -103,6 +103,51 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="pl">
       <head>
         <HeadContent />
+        <meta property="og:type" content="website" />
+<meta property="og:locale" content="pl_PL" />
+<meta property="og:site_name" content="WM Detail" />
+
+<meta
+  property="og:title"
+  content="WM Detail – Car Detailing Dąbrowa Górnicza"
+/>
+
+<meta
+  property="og:description"
+  content="Profesjonalny detailing samochodowy w Dąbrowie Górniczej. Korekta lakieru, powłoki ceramiczne, detailing wnętrza oraz mycie detailingowe."
+/>
+
+<meta property="og:url" content="https://wmdetail.pl" />
+
+<meta
+  property="og:image"
+  content="https://wmdetail.pl/og-image.jpg"
+/>
+
+<meta
+  property="og:image:secure_url"
+  content="https://wmdetail.pl/og-image.jpg"
+/>
+
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta
+  name="twitter:title"
+  content="WM Detail – Car Detailing Dąbrowa Górnicza"
+/>
+
+<meta
+  name="twitter:description"
+  content="Profesjonalny detailing samochodowy w Dąbrowie Górniczej."
+/>
+
+<meta
+  name="twitter:image"
+  content="https://wmdetail.pl/og-image.jpg"
+/>
         <script
   async
   src="https://www.googletagmanager.com/gtag/js?id=G-VTM05EJ641"
