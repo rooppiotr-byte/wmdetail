@@ -19,6 +19,7 @@ export function SiteHeader() {
         <nav aria-label="Główna" className="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-muted-foreground">
           <Link to="/" hash="uslugi" className="hover:text-foreground transition-colors">Usługi</Link>
           <Link to="/" hash="realizacje" className="hover:text-foreground transition-colors">Realizacje</Link>
+          <Link to="/" hash="cennik" className="hover:text-foreground transition-colors">Cennik</Link>
           <Link to="/" hash="kontakt" className="hover:text-foreground transition-colors">Kontakt</Link>
         </nav>
         <div className="flex items-center gap-3">

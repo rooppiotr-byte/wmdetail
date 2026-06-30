@@ -8,6 +8,7 @@ import portfolio1 from "@/assets/lucid-air-detailing-korekta-ceramika.jpg";
 import portfolio2 from "@/assets/lucid-air-pure-detailing-kompleksowy.jpg";
 import portfolio3 from "@/assets/mazda-3-mycie-detailingowe.jpg";
 import portfolio4 from "@/assets/lucyna-gt-srodek-nastrone.jpg";
+import { PricingSection } from "@/components/PricingSection";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BUSINESS, SITE_URL } from "@/lib/site";
@@ -210,7 +211,7 @@ function Index() {
             </div>
           </div>
         </section>
-
+<PricingSection />
         {/* KONTAKT + MAPA */}
         <section id="kontakt" className="relative py-32 px-6" aria-labelledby="kontakt-heading">
           <div className="max-w-7xl mx-auto">
