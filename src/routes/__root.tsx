@@ -10,7 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import logoAsset from "../assets/wm-detail-logo.png";
+
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 
@@ -86,10 +86,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: logoAsset, type: "image/png" },
-      { rel: "apple-touch-icon", href: logoAsset },
-    ],
+  { rel: "stylesheet", href: appCss },
+
+  { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+  { rel: "shortcut icon", href: "/favicon.svg" },
+],
+    
   }),
 
   shellComponent: RootShell,

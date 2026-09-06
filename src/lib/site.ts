@@ -3,7 +3,7 @@ export const BUSINESS = {
   name: "WM Detail Car Detailing",
   phone: "+48 505 797 300",
   phoneHref: "tel:+48505797300",
-  email: "wmdetaildg@gmail.com",
+  email: "biuro@wmdetail.pl",
   street: "ul. Św. Antoniego 166",
   postalCode: "41-303",
   city: "Dąbrowa Górnicza",
