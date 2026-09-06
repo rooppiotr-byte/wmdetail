@@ -8,7 +8,16 @@ import servicePolish from "@/assets/lucid-air-pure-detailing-kompleksowy.jpg";
 import serviceInterior from "@/assets/lucyna-gt-srodek-nastrone.jpg";
 import serviceCeramic from "@/assets/lucid-air-detailing-korekta-ceramika.jpg";
 import lucidInterior from "@/assets/lucyna-gt-srodek-nastrone.jpg";
+import audiA3Mycie from "@/assets/mycie-detailingowe-audia3.webp";
+import lucidGtKorekta from "@/assets/mycie-detailingowe-lucidgt.webp";
+import audiEtronMycie from "@/assets/mycie-zewnetrzne-audi.webp";
 
+
+type GalleryImage = {
+  src: string;
+  alt: string;
+  caption: string;
+};
 
 type ServiceMeta = {
   slug: string;
@@ -20,6 +29,7 @@ type ServiceMeta = {
   bullets: string[];
   image: string;
   alt: string;
+  gallery: GalleryImage[];
 };
 
 export const ALL_SERVICES: ServiceMeta[] = [
@@ -31,8 +41,11 @@ export const ALL_SERVICES: ServiceMeta[] = [
     h1: "Detailing wnętrza samochodu — Dąbrowa Górnicza",
     intro: "Kompleksowe czyszczenie kabiny: tapicerka, skóra, plastiki, podsufitka i wykończenia. Dezynfekcja ozonem usuwa nieprzyjemne zapachy.",
     bullets: ["Pranie tapicerki materiałowej i welurowej", "Czyszczenie i pielęgnacja skóry", "Detailing plastików i wykończeń", "Dezynfekcja ozonem", "Mycie szyb od wewnątrz"],
-    image: lucidInterior.url,
+    image: lucidInterior,
     alt: "Detailing wnętrza Lucid Air w studio WM Detail w Dąbrowie Górniczej",
+    gallery: [
+      { src: serviceInterior, alt: "Wnętrze samochodu po detailingu w WM Detail w Dąbrowie Górniczej", caption: "Detailing wnętrza — dokładne czyszczenie kabiny i wykończeń" },
+    ],
   },
   {
     slug: "korekta-lakieru",
@@ -44,6 +57,9 @@ export const ALL_SERVICES: ServiceMeta[] = [
     bullets: ["Pomiar grubości powłoki lakieru", "Jedno- lub wieloetapowa korekta", "Usuwanie rys i hologramów", "Lustrzane wykończenie", "Przygotowanie pod powłokę ceramiczną"],
     image: servicePolish,
     alt: "Korekta lakieru maszynową polerką — WM Detail Dąbrowa Górnicza",
+    gallery: [
+      { src: lucidGtKorekta, alt: "Lucid GT po korekcie lakieru w WM Detail w Dąbrowie Górniczej", caption: "Lucid GT — korekta lakieru i poprawa głębi koloru" },
+    ],
   },
   {
     slug: "powloki-ceramiczne",
@@ -55,6 +71,9 @@ export const ALL_SERVICES: ServiceMeta[] = [
     bullets: ["Przygotowanie i korekta lakieru", "Aplikacja powłoki 2H–10H", "Hydrofobowość i efekt samoczyszczenia", "Ochrona przed UV i ptasimi odchodami", "Gwarancja trwałości"],
     image: serviceCeramic,
     alt: "Aplikacja powłoki ceramicznej na lakier samochodu — WM Detail",
+    gallery: [
+      { src: serviceCeramic, alt: "Aplikacja powłoki ceramicznej na lakier samochodu w WM Detail", caption: "Powłoka ceramiczna — ochrona lakieru i głębia koloru" },
+    ],
   },
   {
     slug: "pranie-tapicerki",
@@ -65,7 +84,10 @@ export const ALL_SERVICES: ServiceMeta[] = [
     intro: "Ekstrakcyjne pranie tapicerki usuwa kurz, plamy i alergeny. Wnętrze odzyskuje świeżość, a foteliki dziecięce wracają do stanu fabrycznego.",
     bullets: ["Pranie foteli i kanapy", "Pranie podsufitki", "Pranie dywaników i wykładziny", "Usuwanie plam organicznych", "Neutralizacja zapachów"],
     image: serviceInterior,
-    alt: "Pranie tapicerki samochodowej w WM Detail Dąbrowa Górnicza",
+    alt: "Pranie tapicerki samochodowej w WM Detail Dąbrowie Górniczej",
+    gallery: [
+      { src: serviceInterior, alt: "Pranie tapicerki i czyszczenie wnętrza samochodu w WM Detail", caption: "Pranie tapicerki — odświeżenie wnętrza samochodu" },
+    ],
   },
   {
     slug: "mycie-detailingowe",
@@ -77,6 +99,10 @@ export const ALL_SERVICES: ServiceMeta[] = [
     bullets: ["Pre wash i piana aktywna", "Mycie metodą dwóch wiader", "Opony, felgi i wnęki", "Mycie szyb i listew", "Bezpieczne osuszanie"],
     image: servicePolish,
     alt: "Mycie detailingowe samochodu w studio WM Detail",
+    gallery: [
+      { src: audiA3Mycie, alt: "Audi A3 po myciu detailingowym w WM Detail w Dąbrowie Górniczej", caption: "Audi A3 — mycie detailingowe, felgi, opony i bezpieczne osuszanie" },
+      { src: audiEtronMycie, alt: "Audi e-tron Sportback po myciu zewnętrznym w WM Detail", caption: "Audi e-tron Sportback — mycie zewnętrzne i pielęgnacja karoserii" },
+    ],
   },
 ];
 
@@ -92,11 +118,28 @@ export function ServicePageLayout({ slug, children }: { slug: string; children?:
           <h1 className="font-display text-4xl sm:text-5xl font-bold mb-6">{svc.h1}</h1>
           <p className="text-lg text-muted-foreground mb-10">{svc.intro}</p>
 
+          <section className="mb-12" aria-label={'Realizacje: ' + svc.title}>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {svc.gallery.map((photo) => (
+                <figure key={photo.alt} className="overflow-hidden rounded-xl border-silver bg-graphite shadow-elegant">
+                  <img src={photo.src} alt={photo.alt} width={1280} height={896} loading="lazy" className="h-72 w-full object-cover" />
+                  <figcaption className="p-4 text-sm text-muted-foreground">{photo.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
 
           <h2 className="font-display text-2xl font-semibold mb-4">Co obejmuje usługa</h2>
           <ul className="space-y-2 text-muted-foreground mb-10 list-disc list-inside">
             {svc.bullets.map((b) => <li key={b}>{b}</li>)}
           </ul>
+
+          <section className="mb-10 rounded-xl border-silver bg-graphite p-6 sm:p-8">
+            <h2 className="font-display text-2xl font-semibold mb-3">Jak ustalamy zakres i cenę?</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Ostateczna wycena zależy od wielkości auta, jego aktualnego stanu oraz oczekiwanego efektu. Możesz zadzwonić, napisać e-mail lub przesłać zdjęcia samochodu — dobierzemy odpowiedni zakres prac i zaproponujemy termin.
+            </p>
+          </section>
 
           {children}
 
