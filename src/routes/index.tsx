@@ -9,8 +9,7 @@ import portfolio2 from "@/assets/lucid-air-pure-detailing-kompleksowy.jpg";
 import portfolio3 from "@/assets/mazda-3-mycie-detailingowe.jpg";
 import portfolio4 from "@/assets/lucyna-gt-srodek-nastrone.jpg";
 import portfolio5 from "@/assets/mycie-detailingowe-audia3.webp";
-import portfolio6 from "@/assets/mycie-detailingowe-lucidgt.webp";
-import portfolio7 from "@/assets/mycie-zewnetrzne-audi.webp";
+import portfolio6 from "@/assets/mycie-zewnetrzne-audi.webp";
 import { PricingSection } from "@/components/PricingSection";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -93,7 +92,7 @@ const services = [
 
 const portfolio = [
   { img: portfolio1, title: "Lucid Air Pure", tag: "Korekta + Ceramika", alt: "Lucid Air Pure po korekcie lakieru i powłoce ceramicznej w WM Detail" },
-  { img: portfolio2, title: "Lucid Air Pure", tag: "Detailing kompletny", alt: "Lucid Air Pure po kompletnym detailingu w Dąbrowie Górniczej" },
+  { img: portfolio2, title: "Lucid Air GT", tag: "Detailing kompletny", alt: "Lucid Air GTpo kompletnym detailingu w Dąbrowie Górniczej" },
   { img: portfolio3, title: "Mazda 3", tag: "Detailing zewnętrzny", alt: "Mazda 3 po detailingu zewnętrznym — realizacja WM Detail" },
   { img: portfolio4, title: "Lucid Grand Touring", tag: "Detailing wnętrza", alt: "Lucid Grand Touring po detailingu wnętrza" },
     {
@@ -103,13 +102,10 @@ const portfolio = [
     alt: "Audi A3 po myciu detailingowym w WM Detail w Dąbrowie Górniczej",
   },
   {
-    img: portfolio6,
-    title: "Lucid GT",
-    tag: "Korekta lakieru",
-    alt: "Lucid GT po korekcie lakieru w WM Detail",
+    
   },
   {
-    img: portfolio7,
+    img: portfolio6,
     title: "Audi e-tron Sportback",
     tag: "Mycie detailingowe",
     alt: "Audi e-tron Sportback po myciu detailingowym w WM Detail",
