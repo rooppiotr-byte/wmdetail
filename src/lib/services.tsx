@@ -58,10 +58,13 @@ export const ALL_SERVICES: ServiceMeta[] = [
     alt: "Wnętrze Lucid Air po detailingu w WM Detail",
     caption: "Lucid Air — pielęgnacja wnętrza i elementów wykończeniowych",
   },
+  {
+    src: serviceInterior,
+    alt: "Wnętrze samochodu po detailingu w WM Detail w Dąbrowie Górniczej",
+    caption: "Detailing wnętrza — dokładne czyszczenie kabiny i wykończeń",
+  },
 ],
-    gallery: [
-      { src: serviceInterior, alt: "Wnętrze samochodu po detailingu w WM Detail w Dąbrowie Górniczej", caption: "Detailing wnętrza — dokładne czyszczenie kabiny i wykończeń" },
-    ],
+    
   },
   {
     slug: "korekta-lakieru",
@@ -126,11 +129,18 @@ export const ALL_SERVICES: ServiceMeta[] = [
     alt: "Czyszczenie komory silnika wykonane przez WM Detail",
     caption: "Komora silnika — bezpieczne czyszczenie i odświeżenie",
   },
+  {
+    src:audiA3Mycie,
+    alt: "Audi A3 po myciu detailingowym w WM Detail w Dąbrowie Górniczej",
+    caption: "Audi A3 — mycie detailingowe, felgi, opony i bezpieczne osuszanie",
+  },
+  {
+    src: audiEtronMycie,
+    alt: "Audi e-tron Sportback po myciu zewnętrznym w WM Detail",
+    caption: "Audi e-tron Sportback — mycie zewnętrzne i pielęgnacja karoserii",
+  },
 ],
-    gallery: [
-      { src: audiA3Mycie, alt: "Audi A3 po myciu detailingowym w WM Detail w Dąbrowie Górniczej", caption: "Audi A3 — mycie detailingowe, felgi, opony i bezpieczne osuszanie" },
-      { src: audiEtronMycie, alt: "Audi e-tron Sportback po myciu zewnętrznym w WM Detail", caption: "Audi e-tron Sportback — mycie zewnętrzne i pielęgnacja karoserii" },
-    ],
+    
   },
 ];
 
