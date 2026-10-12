@@ -10,6 +10,11 @@ import portfolio3 from "@/assets/mazda-3-mycie-detailingowe.jpg";
 import portfolio4 from "@/assets/lucyna-gt-srodek-nastrone.jpg";
 import portfolio5 from "@/assets/mycie-detailingowe-audia3.webp";
 import portfolio6 from "@/assets/mycie-zewnetrzne-audi.webp";
+import portfolio7 from "@/assets/detailing-cupra.webp";
+import portfolio8 from "@/assets/detailing-lucid.webp";
+import portfolio9 from "@/assets/mycie-komora.webp";
+import portfolio10 from "@/assets/mycie-lucidgt.webp";
+import portfolio11 from "@/assets/wizytowka-wmdetail.webp";
 import { PricingSection } from "@/components/PricingSection";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -109,6 +114,36 @@ const portfolio = [
     title: "Audi e-tron Sportback",
     tag: "Mycie detailingowe",
     alt: "Audi e-tron Sportback po myciu detailingowym w WM Detail",
+  },
+    {
+    img: portfolio7,
+    title: "Cupra",
+    tag: "Detailing wnętrza",
+    alt: "Wnętrze Cupry po detailingu w WM Detail w Dąbrowie Górniczej",
+  },
+  {
+    img: portfolio8,
+    title: "Lucid Air",
+    tag: "Detailing wnętrza",
+    alt: "Wnętrze Lucid Air po detailingu w WM Detail w Dąbrowie Górniczej",
+  },
+  {
+    img: portfolio9,
+    title: "Komora silnika",
+    tag: "Mycie detailingowe",
+    alt: "Czyszczenie komory silnika wykonane przez WM Detail",
+  },
+  {
+    img: portfolio10,
+    title: "Lucid Grand Touring",
+    tag: "Mycie zewnętrzne",
+    alt: "Lucid Grand Touring po myciu zewnętrznym w WM Detail",
+  },
+  {
+    img: portfolio11,
+    title: "WM Detail",
+    tag: "Dbałość o detale",
+    alt: "Wizytówka WM Detail w zadbanym wnętrzu samochodu",
   },
 ];
 
