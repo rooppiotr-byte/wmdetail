@@ -11,7 +11,11 @@ import lucidInterior from "@/assets/lucyna-gt-srodek-nastrone.jpg";
 import audiA3Mycie from "@/assets/mycie-detailingowe-audia3.webp";
 import lucidGtKorekta from "@/assets/mycie-detailingowe-lucidgt.webp";
 import audiEtronMycie from "@/assets/mycie-zewnetrzne-audi.webp";
-
+import detailingCupra from "@/assets/detailing-cupra.webp";
+import detailingLucid from "@/assets/detailing-lucid.webp";
+import mycieKomora from "@/assets/mycie-komora.webp";
+import mycieLucidGt from "@/assets/mycie-lucidgt.webp";
+import wizytowkaWmDetail from "@/assets/wizytowka-wmdetail.webp";
 
 type GalleryImage = {
   src: string;
@@ -43,6 +47,18 @@ export const ALL_SERVICES: ServiceMeta[] = [
     bullets: ["Pranie tapicerki materiałowej i welurowej", "Czyszczenie i pielęgnacja skóry", "Detailing plastików i wykończeń", "Dezynfekcja ozonem", "Mycie szyb od wewnątrz"],
     image: lucidInterior,
     alt: "Detailing wnętrza Lucid Air w studio WM Detail w Dąbrowie Górniczej",
+    gallery: [
+  {
+    src: detailingCupra,
+    alt: "Wnętrze Cupry po detailingu w WM Detail",
+    caption: "Cupra — kompleksowy detailing wnętrza",
+  },
+  {
+    src: detailingLucid,
+    alt: "Wnętrze Lucid Air po detailingu w WM Detail",
+    caption: "Lucid Air — pielęgnacja wnętrza i elementów wykończeniowych",
+  },
+],
     gallery: [
       { src: serviceInterior, alt: "Wnętrze samochodu po detailingu w WM Detail w Dąbrowie Górniczej", caption: "Detailing wnętrza — dokładne czyszczenie kabiny i wykończeń" },
     ],
@@ -99,6 +115,18 @@ export const ALL_SERVICES: ServiceMeta[] = [
     bullets: ["Pre wash i piana aktywna", "Mycie metodą dwóch wiader", "Opony, felgi i wnęki", "Mycie szyb i listew", "Bezpieczne osuszanie"],
     image: servicePolish,
     alt: "Mycie detailingowe samochodu w studio WM Detail",
+    gallery: [
+  {
+    src: mycieLucidGt,
+    alt: "Lucid Grand Touring po myciu zewnętrznym w WM Detail",
+    caption: "Lucid Grand Touring — bezpieczne mycie zewnętrzne",
+  },
+  {
+    src: mycieKomora,
+    alt: "Czyszczenie komory silnika wykonane przez WM Detail",
+    caption: "Komora silnika — bezpieczne czyszczenie i odświeżenie",
+  },
+],
     gallery: [
       { src: audiA3Mycie, alt: "Audi A3 po myciu detailingowym w WM Detail w Dąbrowie Górniczej", caption: "Audi A3 — mycie detailingowe, felgi, opony i bezpieczne osuszanie" },
       { src: audiEtronMycie, alt: "Audi e-tron Sportback po myciu zewnętrznym w WM Detail", caption: "Audi e-tron Sportback — mycie zewnętrzne i pielęgnacja karoserii" },
