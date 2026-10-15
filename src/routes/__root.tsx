@@ -19,16 +19,16 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Nie znaleziono strony</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          Strona, której szukasz, nie istnieje lub została przeniesiona.
         </p>
         <div className="mt-6">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Go home
+            Strona główna
           </Link>
         </div>
       </div>
@@ -80,6 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#0a0a0a" },
+      { name: "robots", content: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" },
       { property: "og:site_name", content: "WM Detail Car Detailing" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pl_PL" },
@@ -105,51 +106,6 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="pl">
       <head>
         <HeadContent />
-        <meta property="og:type" content="website" />
-<meta property="og:locale" content="pl_PL" />
-<meta property="og:site_name" content="WM Detail" />
-
-<meta
-  property="og:title"
-  content="WM Detail – Car Detailing Dąbrowa Górnicza"
-/>
-
-<meta
-  property="og:description"
-  content="Profesjonalny detailing samochodowy w Dąbrowie Górniczej. Korekta lakieru, powłoki ceramiczne, detailing wnętrza oraz mycie detailingowe."
-/>
-
-<meta property="og:url" content="https://wmdetail.pl" />
-
-<meta
-  property="og:image"
-  content="https://wmdetail.pl/og-image.jpg"
-/>
-
-<meta
-  property="og:image:secure_url"
-  content="https://wmdetail.pl/og-image.jpg"
-/>
-
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-
-<meta name="twitter:card" content="summary_large_image" />
-
-<meta
-  name="twitter:title"
-  content="WM Detail – Car Detailing Dąbrowa Górnicza"
-/>
-
-<meta
-  name="twitter:description"
-  content="Profesjonalny detailing samochodowy w Dąbrowie Górniczej."
-/>
-
-<meta
-  name="twitter:image"
-  content="https://wmdetail.pl/og-image.jpg"
-/>
         <script
   async
   src="https://www.googletagmanager.com/gtag/js?id=G-VTM05EJ641"

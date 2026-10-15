@@ -15,6 +15,7 @@ import portfolio8 from "@/assets/detailing-lucid.webp";
 import portfolio9 from "@/assets/mycie-komora.webp";
 import portfolio10 from "@/assets/mycie-lucidgt.webp";
 import portfolio11 from "@/assets/wizytowka-wmdetail.webp";
+import logoAsset from "@/assets/wm-detail-logo.png";
 import { PricingSection } from "@/components/PricingSection";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -22,15 +23,19 @@ import { BUSINESS, SITE_URL } from "@/lib/site";
 
 
 const TITLE = "WM Detail Car Detailing | Detailing samochodowy Dąbrowa Górnicza";
-const DESCRIPTION = "Profesjonalny detailing samochodowy w Dąbrowie Górniczej. Detailing wnętrza, korekta lakieru, powłoki ceramiczne, pranie tapicerki oraz kompleksowa pielęgnacja samochodów.";
+const DESCRIPTION = "Detailing samochodowy w Dąbrowie Górniczej: korekta lakieru, powłoki ceramiczne, detailing wnętrza, pranie tapicerki i mycie detailingowe. Bezpłatna wycena.";
+const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
-  "@type": "AutoDetailing",
+  // "AutoDetailing" nie istnieje w schema.org — AutoWash + AutoBodyShop to najbliższe poprawne typy.
+  "@type": ["AutoWash", "AutoBodyShop"],
   name: BUSINESS.name,
-  image: `${SITE_URL}${heroCar}`,
+  image: [OG_IMAGE, `${SITE_URL}${heroCar}`],
+  logo: `${SITE_URL}${logoAsset}`,
   "@id": `${SITE_URL}/#localbusiness`,
   url: SITE_URL,
+  hasMap: BUSINESS.maps,
   telephone: BUSINESS.phone,
   email: BUSINESS.email,
   priceRange: "$$",
@@ -69,10 +74,13 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:url", content: `${SITE_URL}/` },
-      { property: "og:image", content: `${SITE_URL}${heroCar}` },
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "WM Detail Car Detailing — detailing samochodowy w Dąbrowie Górniczej" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
-      { name: "twitter:image", content: `${SITE_URL}${heroCar}` },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [
       { rel: "canonical", href: `${SITE_URL}/` },
@@ -97,7 +105,7 @@ const services = [
 
 const portfolio = [
   { img: portfolio1, title: "Lucid Air Pure", tag: "Korekta + Ceramika", alt: "Lucid Air Pure po korekcie lakieru i powłoce ceramicznej w WM Detail" },
-  { img: portfolio2, title: "Lucid Air GT", tag: "Detailing kompletny", alt: "Lucid Air GTpo kompletnym detailingu w Dąbrowie Górniczej" },
+  { img: portfolio2, title: "Lucid Air GT", tag: "Detailing kompletny", alt: "Lucid Air GT po kompletnym detailingu w Dąbrowie Górniczej" },
   { img: portfolio3, title: "Mazda 3", tag: "Detailing zewnętrzny", alt: "Mazda 3 po detailingu zewnętrznym — realizacja WM Detail" },
   { img: portfolio4, title: "Lucid Grand Touring", tag: "Detailing wnętrza", alt: "Lucid Grand Touring po detailingu wnętrza" },
     {

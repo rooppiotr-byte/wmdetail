@@ -219,25 +219,49 @@ export function buildServiceHead(slug: string) {
       { property: "og:description", content: svc.description },
       { property: "og:url", content: url },
       { property: "og:image", content: img },
-      { property: "og:type", content: "article" },
+      { property: "og:type", content: "website" },
+      { property: "og:image:alt", content: svc.alt },
       { name: "twitter:title", content: svc.metaTitle },
       { name: "twitter:description", content: svc.description },
       { name: "twitter:image", content: img },
     ],
     links: [{ rel: "canonical", href: url }],
-    scripts: [{
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Service",
-        name: svc.title,
-        serviceType: svc.title,
-        provider: { "@type": "AutoDetailing", name: BUSINESS.name, telephone: BUSINESS.phone, address: { "@type": "PostalAddress", streetAddress: BUSINESS.street, postalCode: BUSINESS.postalCode, addressLocality: BUSINESS.city, addressCountry: BUSINESS.country } },
-        areaServed: BUSINESS.city,
-        url,
-        description: svc.description,
-      }),
-    }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": `${url}#service`,
+          name: svc.title,
+          serviceType: svc.title,
+          // "AutoDetailing" nie istnieje w schema.org; provider odsyła do wpisu firmy ze strony głównej.
+          provider: {
+            "@type": ["AutoWash", "AutoBodyShop"],
+            "@id": `${SITE_URL}/#localbusiness`,
+            name: BUSINESS.name,
+            telephone: BUSINESS.phone,
+            url: SITE_URL,
+            address: { "@type": "PostalAddress", streetAddress: BUSINESS.street, postalCode: BUSINESS.postalCode, addressLocality: BUSINESS.city, addressRegion: BUSINESS.region, addressCountry: BUSINESS.country },
+          },
+          areaServed: { "@type": "City", name: BUSINESS.city },
+          url,
+          image: img,
+          description: svc.description,
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Strona główna", item: `${SITE_URL}/` },
+            { "@type": "ListItem", position: 2, name: svc.title, item: url },
+          ],
+        }),
+      },
+    ],
   };
 }
 
