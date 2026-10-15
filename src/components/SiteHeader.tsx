@@ -19,7 +19,7 @@ export function SiteHeader() {
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border bg-background/60 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         <Link to="/" aria-label="WM Detail Car Detailing — strona główna" className="flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
-          <img src={logoAsset} alt="WM Detail Car Detailing — logo" className="h-9 w-auto sm:h-12" width={1641} height={405} />
+          <img src={logoAsset} alt="WM Detail Car Detailing — logo" className="h-9 w-auto sm:h-12" width={2048} height={655} />
         </Link>
 
         <nav aria-label="Główna" className="hidden items-center gap-8 text-sm font-medium uppercase tracking-widest text-muted-foreground md:flex">

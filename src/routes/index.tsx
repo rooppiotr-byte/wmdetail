@@ -1,13 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Sparkles, Droplets, Sofa, Shield, MapPin, Phone, Mail, Instagram, ArrowRight, Clock } from "lucide-react";
-import heroCar from "@/assets/detailing-samochodu-lucid-air.jpg";
-import servicePolish from "@/assets/lucid-air-pure-detailing-kompleksowy.jpg";
-import serviceInterior from "@/assets/lucyna-gt-srodek-nastrone.jpg";
-import serviceCeramic from "@/assets/lucid-air-detailing-korekta-ceramika.jpg";
-import portfolio1 from "@/assets/lucid-air-detailing-korekta-ceramika.jpg";
-import portfolio2 from "@/assets/lucid-air-pure-detailing-kompleksowy.jpg";
-import portfolio3 from "@/assets/mazda-3-mycie-detailingowe.jpg";
-import portfolio4 from "@/assets/lucyna-gt-srodek-nastrone.jpg";
+import heroCar from "@/assets/detailing-samochodu-lucid-air.webp";
+import servicePolish from "@/assets/lucid-air-pure-detailing-kompleksowy.webp";
+import serviceInterior from "@/assets/lucyna-gt-srodek-nastrone.webp";
+import serviceCeramic from "@/assets/lucid-air-detailing-korekta-ceramika.webp";
+import portfolio1 from "@/assets/lucid-air-detailing-korekta-ceramika.webp";
+import portfolio2 from "@/assets/lucid-air-pure-detailing-kompleksowy.webp";
+import portfolio3 from "@/assets/mazda-3-mycie-detailingowe.webp";
+import portfolio4 from "@/assets/lucyna-gt-srodek-nastrone.webp";
 import portfolio5 from "@/assets/mycie-detailingowe-audia3.webp";
 import portfolio6 from "@/assets/mycie-zewnetrzne-audi.webp";
 import portfolio7 from "@/assets/detailing-cupra.webp";
@@ -36,6 +36,11 @@ const localBusinessJsonLd = {
   "@id": `${SITE_URL}/#localbusiness`,
   url: SITE_URL,
   hasMap: BUSINESS.maps,
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: BUSINESS.latitude,
+    longitude: BUSINESS.longitude,
+  },
   telephone: BUSINESS.phone,
   email: BUSINESS.email,
   priceRange: "$$",
@@ -113,9 +118,6 @@ const portfolio = [
     title: "Audi A3",
     tag: "Mycie detailingowe",
     alt: "Audi A3 po myciu detailingowym w WM Detail w Dąbrowie Górniczej",
-  },
-  {
-    
   },
   {
     img: portfolio6,
@@ -364,6 +366,9 @@ function Index() {
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
               Obsługujemy klientów z Dąbrowy Górniczej i całego Zagłębia — przyjeżdżają do nas również z Sosnowca, Będzina, Czeladzi, Katowic i Mysłowic.
+            </p>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
+              WM Detail to studio car detailingu, w którym każde auto traktujemy indywidualnie. Wykonujemy mycie detailingowe, maszynową korektę lakieru, aplikację powłok ceramicznych, detailing wnętrza oraz pranie tapicerki. Zakres prac dobieramy do stanu samochodu i Twoich oczekiwań, a wycenę przygotowujemy po rozmowie lub na podstawie zdjęć auta.
             </p>
             <ul className="flex flex-wrap justify-center gap-3 mb-10" aria-label="Miasta, które obsługujemy">
               {["Dąbrowa Górnicza","Sosnowiec","Będzin","Czeladź","Katowice","Mysłowice"].map((c) => (

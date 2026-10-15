@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/wm-detail-logo.png";
 import { BUSINESS } from "@/lib/site";
+import { OPEN_COOKIE_SETTINGS_EVENT } from "@/lib/consent";
 
 export function SiteFooter() {
   return (
@@ -8,7 +9,7 @@ export function SiteFooter() {
       <div className="max-w-7xl mx-auto grid gap-10 md:grid-cols-4">
         <div className="space-y-3">
           <div className="flex items-center gap-3">
-            <img src={logoAsset} alt="WM Detail Car Detailing — logo" className="h-8 w-auto" width={1641} height={405} loading="lazy" />
+            <img src={logoAsset} alt="WM Detail Car Detailing — logo" className="h-8 w-auto" width={2048} height={655} loading="lazy" />
           </div>
           <p className="font-display tracking-widest text-silver text-sm">CAR DETAILING</p>
           <p className="text-sm text-muted-foreground">Detailing samochodowy Dąbrowa Górnicza</p>
@@ -43,6 +44,7 @@ export function SiteFooter() {
             <li><a href="https://www.facebook.com/profile.php?id=61590402852365&ref=PROFILE_EDIT_xav_ig_profile_page_web" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">Facebook</a></li>
             <li><a href={BUSINESS.maps} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">Google Maps</a></li>
             <li><Link to="/polityka-prywatnosci" className="hover:text-foreground">Polityka prywatności</Link></li>
+            <li><button type="button" onClick={() => window.dispatchEvent(new Event(OPEN_COOKIE_SETTINGS_EVENT))} className="hover:text-foreground">Ustawienia cookies</button></li>
           </ul>
         </div>
       </div>

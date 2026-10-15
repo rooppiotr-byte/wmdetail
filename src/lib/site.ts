@@ -11,4 +11,7 @@ export const BUSINESS = {
   country: "PL",
   instagram: "https://instagram.com/wmdetail.dg",
   maps: "https://maps.app.goo.gl/U1bWg6dCATjZ1i1G9",
+  // Współrzędne pinezki wizytówki firmy w Google Maps (ul. Św. Antoniego 166, Dąbrowa Górnicza).
+  latitude: 50.3543801,
+  longitude: 19.248086,
 };

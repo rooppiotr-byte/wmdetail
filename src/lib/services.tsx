@@ -4,10 +4,11 @@ import { ArrowRight, Phone } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BUSINESS, SITE_URL } from "@/lib/site";
-import servicePolish from "@/assets/lucid-air-pure-detailing-kompleksowy.jpg";
-import serviceInterior from "@/assets/lucyna-gt-srodek-nastrone.jpg";
-import serviceCeramic from "@/assets/lucid-air-detailing-korekta-ceramika.jpg";
-import lucidInterior from "@/assets/lucyna-gt-srodek-nastrone.jpg";
+import { SERVICE_CONTENT } from "@/lib/service-content";
+import servicePolish from "@/assets/lucid-air-pure-detailing-kompleksowy.webp";
+import serviceInterior from "@/assets/lucyna-gt-srodek-nastrone.webp";
+import serviceCeramic from "@/assets/lucid-air-detailing-korekta-ceramika.webp";
+import lucidInterior from "@/assets/lucyna-gt-srodek-nastrone.webp";
 import audiA3Mycie from "@/assets/mycie-detailingowe-audia3.webp";
 import lucidGtKorekta from "@/assets/mycie-detailingowe-lucidgt.webp";
 import audiEtronMycie from "@/assets/mycie-zewnetrzne-audi.webp";
@@ -147,6 +148,7 @@ export const ALL_SERVICES: ServiceMeta[] = [
 export function ServicePageLayout({ slug, children }: { slug: string; children?: ReactNode }) {
   const svc = ALL_SERVICES.find((s) => s.slug === slug)!;
   const others = ALL_SERVICES.filter((s) => s.slug !== slug);
+  const content = SERVICE_CONTENT[slug];
   return (
     <div className="min-h-screen text-foreground overflow-x-hidden">
       <SiteHeader />
@@ -172,6 +174,15 @@ export function ServicePageLayout({ slug, children }: { slug: string; children?:
             {svc.bullets.map((b) => <li key={b}>{b}</li>)}
           </ul>
 
+          {content?.sections.map((section) => (
+            <section key={section.heading} className="mb-10">
+              <h2 className="font-display text-2xl font-semibold mb-4">{section.heading}</h2>
+              {section.paragraphs.map((paragraph) => (
+                <p key={paragraph} className="text-muted-foreground leading-relaxed mb-4">{paragraph}</p>
+              ))}
+            </section>
+          ))}
+
           <section className="mb-10 rounded-xl border-silver bg-graphite p-6 sm:p-8">
             <h2 className="font-display text-2xl font-semibold mb-3">Jak ustalamy zakres i cenę?</h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -180,6 +191,20 @@ export function ServicePageLayout({ slug, children }: { slug: string; children?:
           </section>
 
           {children}
+
+          {content && content.faq.length > 0 && (
+            <section className="mb-10" aria-labelledby="faq-heading">
+              <h2 id="faq-heading" className="font-display text-2xl font-semibold mb-4">Najczęściej zadawane pytania</h2>
+              <div className="space-y-6">
+                {content.faq.map((item) => (
+                  <div key={item.q}>
+                    <h3 className="font-semibold mb-2">{item.q}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{item.a}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           <div className="bg-graphite border-silver rounded-xl p-8 my-10">
             <h2 className="font-display text-2xl font-semibold mb-3">Umów termin</h2>
@@ -250,6 +275,22 @@ export function buildServiceHead(slug: string) {
           description: svc.description,
         }),
       },
+      ...(SERVICE_CONTENT[slug]?.faq.length
+        ? [
+            {
+              type: "application/ld+json",
+              children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: SERVICE_CONTENT[slug].faq.map((item) => ({
+                  "@type": "Question",
+                  name: item.q,
+                  acceptedAnswer: { "@type": "Answer", text: item.a },
+                })),
+              }),
+            },
+          ]
+        : []),
       {
         type: "application/ld+json",
         children: JSON.stringify({

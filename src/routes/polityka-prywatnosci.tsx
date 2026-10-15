@@ -36,7 +36,7 @@ function PrivacyPage() {
           <h2 className="font-display text-2xl font-semibold mt-8 mb-3">Jakie dane przetwarzamy</h2>
           <p className="text-muted-foreground mb-6">Dane podane przez Państwa w trakcie kontaktu telefonicznego, e-mailowego lub przez media społecznościowe — w celu umówienia i realizacji usługi.</p>
           <h2 className="font-display text-2xl font-semibold mt-8 mb-3">Pliki cookies</h2>
-          <p className="text-muted-foreground mb-6">Strona może wykorzystywać pliki cookies w celach statystycznych i poprawy działania serwisu.</p>
+          <p className="text-muted-foreground mb-6">Za Twoją zgodą korzystamy z plików cookies Google Analytics (Google Ireland Limited) w celach statystycznych i poprawy działania serwisu. Bez zgody te pliki nie są zapisywane. Zgodę możesz w każdej chwili zmienić lub wycofać, klikając „Ustawienia cookies” w stopce strony, a także usunąć pliki cookies w ustawieniach przeglądarki.</p>
           <h2 className="font-display text-2xl font-semibold mt-8 mb-3">Prawa</h2>
           <p className="text-muted-foreground">Mają Państwo prawo dostępu do swoich danych, ich sprostowania, usunięcia oraz wniesienia sprzeciwu wobec ich przetwarzania.</p>
         </article>
