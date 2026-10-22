@@ -5,9 +5,9 @@ const interiorServices = [
   {
     title: "Detailing Basic",
     price: {
-      S: "100 zł",
-      M: "130 zł",
-      L: "160 zł",
+      S: "150 zł",
+      M: "170 zł",
+      L: "200 zł",
     },
     features: [
       "Odkurzanie wnętrza",
@@ -27,7 +27,7 @@ const interiorServices = [
   },
   {
     title: "Pranie tapicerki materiałowej",
-    price: "od 250 zł",
+    price: "od 300 zł",
     features: [
       "Dokładne pranie foteli",
       "Usuwanie zabrudzeń",
@@ -36,7 +36,7 @@ const interiorServices = [
   },
   {
     title: "Pranie tapicerki skórzanej",
-    price: "od 250 zł",
+    price: "od 300 zł",
     features: [
       "Czyszczenie skóry",
       "Odżywienie",
@@ -53,6 +53,19 @@ const paintServices = [
       "Usunięcie drobnych rys",
       "Przywrócenie połysku",
       "Przygotowanie lakieru",
+    ],
+  },
+  {
+    title: "Powłoki ceramiczne",
+    price: {
+      "1 rok": "od 800 zł",
+      "3 lata": "od 1800 zł",
+      "5 lat": "od 2400 zł",
+    },
+    features: [
+      "Hydrofobowość",
+      "Głębia koloru",
+      "Długa ochrona lakieru",
     ],
   },
 ];
@@ -233,7 +246,7 @@ const exteriorServices = [
               </h3>
 
               <p className="text-muted-foreground">
-                Korekta oraz przywracanie głębi koloru.
+                Korekta, powłoki ceramiczne i przywracanie głębi koloru.
               </p>
 
             </div>
