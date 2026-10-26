@@ -43,6 +43,14 @@ const interiorServices = [
       "Impregnacja",
     ],
   },
+  {
+    title: "Ozonowanie wnętrza",
+    price: "80 zł",
+    features: [
+      "Dezynfekcja wnętrza ozonem",
+      "Neutralizacja nieprzyjemnych zapachów",
+    ],
+  },
 ];
 
 const paintServices = [
