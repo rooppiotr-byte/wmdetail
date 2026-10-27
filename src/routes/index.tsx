@@ -19,7 +19,8 @@ import logoAsset from "@/assets/wm-detail-logo.png";
 import { PricingSection } from "@/components/PricingSection";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { BUSINESS, SITE_URL } from "@/lib/site";
+import { AREA_SERVED, BUSINESS, SITE_URL } from "@/lib/site";
+import { buildOfferCatalog } from "@/lib/prices";
 
 
 const TITLE = "WM Detail Car Detailing | Detailing samochodowy Dąbrowa Górnicza";
@@ -56,16 +57,11 @@ const localBusinessJsonLd = {
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "08:00", closes: "16:00" },
     { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "14:00" },
   ],
-  areaServed: [
-    { "@type": "City", name: "Dąbrowa Górnicza" },
-    { "@type": "City", name: "Sosnowiec" },
-    { "@type": "City", name: "Będzin" },
-    { "@type": "City", name: "Czeladź" },
-    { "@type": "City", name: "Katowice" },
-    { "@type": "City", name: "Mysłowice" },
-  ],
+  areaServed: AREA_SERVED.map((name) => ({ "@type": "City", name })),
+  hasOfferCatalog: buildOfferCatalog(),
   sameAs: [
     BUSINESS.instagram,
+    BUSINESS.maps,
     "https://www.tiktok.com/@wmdetail.dg",
     "https://www.facebook.com/profile.php?id=61590402852365",
   ],
@@ -90,9 +86,6 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: `${SITE_URL}/` },
       { rel: "preload", as: "image", href: heroCar, fetchpriority: "high" } as any,
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" },
     ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(localBusinessJsonLd) },
@@ -371,7 +364,7 @@ function Index() {
               WM Detail to studio car detailingu, w którym każde auto traktujemy indywidualnie. Wykonujemy mycie detailingowe, maszynową korektę lakieru, aplikację powłok ceramicznych, detailing wnętrza oraz pranie tapicerki. Zakres prac dobieramy do stanu samochodu i Twoich oczekiwań, a wycenę przygotowujemy po rozmowie lub na podstawie zdjęć auta.
             </p>
             <ul className="flex flex-wrap justify-center gap-3 mb-10" aria-label="Miasta, które obsługujemy">
-              {["Dąbrowa Górnicza","Sosnowiec","Będzin","Czeladź","Katowice","Mysłowice"].map((c) => (
+              {AREA_SERVED.map((c) => (
                 <li key={c} className="px-4 py-2 rounded-md border-silver text-sm uppercase tracking-widest text-silver">{c}</li>
               ))}
             </ul>
@@ -383,15 +376,7 @@ function Index() {
       </main>
 
       <SiteFooter />
-
-      {/* Mobile sticky call bar */}
-      <a
-        href={BUSINESS.phoneHref}
-        aria-label={`Zadzwoń ${BUSINESS.phone}`}
-        className="md:hidden fixed bottom-4 inset-x-4 z-50 inline-flex items-center justify-center gap-3 px-6 py-4 bg-foreground text-background rounded-md font-semibold uppercase tracking-widest text-sm shadow-silver-glow"
-      >
-        <Phone className="w-4 h-4" aria-hidden="true" /> Zadzwoń — umów termin
-      </a>
+      {/* Mobilny pasek „Zadzwoń” jest renderowany globalnie w __root.tsx */}
     </div>
   );
 }

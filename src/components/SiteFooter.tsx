@@ -5,7 +5,7 @@ import { OPEN_COOKIE_SETTINGS_EVENT } from "@/lib/consent";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border py-12 px-6 bg-background">
+    <footer className="border-t border-border pt-12 pb-28 md:pb-12 px-6 bg-background">
       <div className="max-w-7xl mx-auto grid gap-10 md:grid-cols-4">
         <div className="space-y-3">
           <div className="flex items-center gap-3">
@@ -23,6 +23,8 @@ export function SiteFooter() {
             <li><Link to="/uslugi/powloki-ceramiczne" className="hover:text-foreground">Powłoki ceramiczne</Link></li>
             <li><Link to="/uslugi/pranie-tapicerki" className="hover:text-foreground">Pranie tapicerki</Link></li>
             <li><Link to="/uslugi/mycie-detailingowe" className="hover:text-foreground">Mycie detailingowe</Link></li>
+            <li><Link to={"/uslugi/" as any} className="hover:text-foreground">Wszystkie usługi</Link></li>
+            <li><Link to={"/cennik" as any} className="hover:text-foreground">Cennik</Link></li>
           </ul>
         </nav>
 

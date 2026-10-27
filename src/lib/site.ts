@@ -15,3 +15,12 @@ export const BUSINESS = {
   latitude: 50.3543801,
   longitude: 19.248086,
 };
+
+export const AREA_SERVED = [
+  "Dąbrowa Górnicza",
+  "Sosnowiec",
+  "Będzin",
+  "Czeladź",
+  "Katowice",
+  "Mysłowice",
+];

@@ -4,6 +4,8 @@ import { SITE_URL } from "@/lib/site";
 
 const PATHS = [
   "/",
+  "/uslugi",
+  "/cennik",
   "/uslugi/detailing-wnetrza",
   "/uslugi/korekta-lakieru",
   "/uslugi/powloki-ceramiczne",

@@ -3,8 +3,11 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Phone } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { BUSINESS, SITE_URL } from "@/lib/site";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ServicePrices } from "@/components/ServicePrices";
+import { AREA_SERVED, BUSINESS, SITE_URL } from "@/lib/site";
 import { SERVICE_CONTENT } from "@/lib/service-content";
+import { offersFor, pricesForService } from "@/lib/prices";
 import servicePolish from "@/assets/lucid-air-pure-detailing-kompleksowy.webp";
 import serviceInterior from "@/assets/lucyna-gt-srodek-nastrone.webp";
 import serviceCeramic from "@/assets/lucid-air-detailing-korekta-ceramika.webp";
@@ -154,6 +157,13 @@ export function ServicePageLayout({ slug, children }: { slug: string; children?:
       <SiteHeader />
       <main className="pt-28 pb-20 px-6">
         <article className="max-w-4xl mx-auto">
+          <Breadcrumbs
+            items={[
+              { label: "Strona główna", to: "/" },
+              { label: "Usługi", to: "/uslugi/" },
+              { label: svc.title },
+            ]}
+          />
           <p className="text-xs uppercase tracking-[0.4em] text-silver mb-4">— Usługa</p>
           <h1 className="font-display text-4xl sm:text-5xl font-bold mb-6">{svc.h1}</h1>
           <p className="text-lg text-muted-foreground mb-10">{svc.intro}</p>
@@ -182,6 +192,8 @@ export function ServicePageLayout({ slug, children }: { slug: string; children?:
               ))}
             </section>
           ))}
+
+          <ServicePrices slug={slug} />
 
           <section className="mb-10 rounded-xl border-silver bg-graphite p-6 sm:p-8">
             <h2 className="font-display text-2xl font-semibold mb-3">Jak ustalamy zakres i cenę?</h2>
@@ -269,7 +281,8 @@ export function buildServiceHead(slug: string) {
             url: SITE_URL,
             address: { "@type": "PostalAddress", streetAddress: BUSINESS.street, postalCode: BUSINESS.postalCode, addressLocality: BUSINESS.city, addressRegion: BUSINESS.region, addressCountry: BUSINESS.country },
           },
-          areaServed: { "@type": "City", name: BUSINESS.city },
+          areaServed: AREA_SERVED.map((name) => ({ "@type": "City", name })),
+          offers: pricesForService(slug).flatMap(offersFor),
           url,
           image: img,
           description: svc.description,
@@ -298,7 +311,8 @@ export function buildServiceHead(slug: string) {
           "@type": "BreadcrumbList",
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Strona główna", item: `${SITE_URL}/` },
-            { "@type": "ListItem", position: 2, name: svc.title, item: url },
+            { "@type": "ListItem", position: 2, name: "Usługi", item: `${SITE_URL}/uslugi` },
+            { "@type": "ListItem", position: 3, name: svc.title, item: url },
           ],
         }),
       },

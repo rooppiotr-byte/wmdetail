@@ -11,7 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PolitykaPrywatnosciRouteImport } from './routes/polityka-prywatnosci'
+import { Route as CennikRouteImport } from './routes/cennik'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as UslugiIndexRouteImport } from './routes/uslugi.index'
 import { Route as UslugiPranieTapicerkiRouteImport } from './routes/uslugi.pranie-tapicerki'
 import { Route as UslugiPowlokiCeramiczneRouteImport } from './routes/uslugi.powloki-ceramiczne'
 import { Route as UslugiMycieDetailingoweRouteImport } from './routes/uslugi.mycie-detailingowe'
@@ -28,9 +30,19 @@ const PolitykaPrywatnosciRoute = PolitykaPrywatnosciRouteImport.update({
   path: '/polityka-prywatnosci',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CennikRoute = CennikRouteImport.update({
+  id: '/cennik',
+  path: '/cennik',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UslugiIndexRoute = UslugiIndexRouteImport.update({
+  id: '/uslugi/',
+  path: '/uslugi/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const UslugiPranieTapicerkiRoute = UslugiPranieTapicerkiRouteImport.update({
@@ -61,9 +73,11 @@ const UslugiDetailingWnetrzaRoute = UslugiDetailingWnetrzaRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cennik': typeof CennikRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/uslugi/detailing-wnetrza': typeof UslugiDetailingWnetrzaRoute
+  '/uslugi/': typeof UslugiIndexRoute
   '/uslugi/korekta-lakieru': typeof UslugiKorektaLakieruRoute
   '/uslugi/mycie-detailingowe': typeof UslugiMycieDetailingoweRoute
   '/uslugi/powloki-ceramiczne': typeof UslugiPowlokiCeramiczneRoute
@@ -71,9 +85,11 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cennik': typeof CennikRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/uslugi/detailing-wnetrza': typeof UslugiDetailingWnetrzaRoute
+  '/uslugi': typeof UslugiIndexRoute
   '/uslugi/korekta-lakieru': typeof UslugiKorektaLakieruRoute
   '/uslugi/mycie-detailingowe': typeof UslugiMycieDetailingoweRoute
   '/uslugi/powloki-ceramiczne': typeof UslugiPowlokiCeramiczneRoute
@@ -82,9 +98,11 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cennik': typeof CennikRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/uslugi/detailing-wnetrza': typeof UslugiDetailingWnetrzaRoute
+  '/uslugi/': typeof UslugiIndexRoute
   '/uslugi/korekta-lakieru': typeof UslugiKorektaLakieruRoute
   '/uslugi/mycie-detailingowe': typeof UslugiMycieDetailingoweRoute
   '/uslugi/powloki-ceramiczne': typeof UslugiPowlokiCeramiczneRoute
@@ -94,9 +112,11 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/cennik'
     | '/polityka-prywatnosci'
     | '/sitemap.xml'
     | '/uslugi/detailing-wnetrza'
+    | '/uslugi/'
     | '/uslugi/korekta-lakieru'
     | '/uslugi/mycie-detailingowe'
     | '/uslugi/powloki-ceramiczne'
@@ -104,9 +124,11 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/cennik'
     | '/polityka-prywatnosci'
     | '/sitemap.xml'
     | '/uslugi/detailing-wnetrza'
+    | '/uslugi'
     | '/uslugi/korekta-lakieru'
     | '/uslugi/mycie-detailingowe'
     | '/uslugi/powloki-ceramiczne'
@@ -114,9 +136,11 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/cennik'
     | '/polityka-prywatnosci'
     | '/sitemap.xml'
     | '/uslugi/detailing-wnetrza'
+    | '/uslugi/'
     | '/uslugi/korekta-lakieru'
     | '/uslugi/mycie-detailingowe'
     | '/uslugi/powloki-ceramiczne'
@@ -125,9 +149,11 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CennikRoute: typeof CennikRoute
   PolitykaPrywatnosciRoute: typeof PolitykaPrywatnosciRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   UslugiDetailingWnetrzaRoute: typeof UslugiDetailingWnetrzaRoute
+  UslugiIndexRoute: typeof UslugiIndexRoute
   UslugiKorektaLakieruRoute: typeof UslugiKorektaLakieruRoute
   UslugiMycieDetailingoweRoute: typeof UslugiMycieDetailingoweRoute
   UslugiPowlokiCeramiczneRoute: typeof UslugiPowlokiCeramiczneRoute
@@ -150,11 +176,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PolitykaPrywatnosciRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cennik': {
+      id: '/cennik'
+      path: '/cennik'
+      fullPath: '/cennik'
+      preLoaderRoute: typeof CennikRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/uslugi/': {
+      id: '/uslugi/'
+      path: '/uslugi/'
+      fullPath: '/uslugi/'
+      preLoaderRoute: typeof UslugiIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/uslugi/pranie-tapicerki': {
@@ -197,9 +237,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CennikRoute: CennikRoute,
   PolitykaPrywatnosciRoute: PolitykaPrywatnosciRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   UslugiDetailingWnetrzaRoute: UslugiDetailingWnetrzaRoute,
+  UslugiIndexRoute: UslugiIndexRoute,
   UslugiKorektaLakieruRoute: UslugiKorektaLakieruRoute,
   UslugiMycieDetailingoweRoute: UslugiMycieDetailingoweRoute,
   UslugiPowlokiCeramiczneRoute: UslugiPowlokiCeramiczneRoute,
