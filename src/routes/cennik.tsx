@@ -7,7 +7,7 @@ import { buildOfferCatalog } from "@/lib/prices";
 
 const TITLE = "Cennik detailingu Dąbrowa Górnicza | WM Detail Car Detailing";
 const DESCRIPTION =
-  "Cennik detailingu samochodowego w Dąbrowie Górniczej: detailing wnętrza, pranie tapicerki, ozonowanie, korekta lakieru, powłoki ceramiczne i mycie detailingowe. Bezpłatna wycena.";
+  "Cennik detailingu w Dąbrowie Górniczej: wnętrze, pranie tapicerki, ozonowanie, korekta lakieru, powłoki ceramiczne i mycie. Bezpłatna wycena.";
 const URL = `${SITE_URL}/cennik`;
 
 export const Route = createFileRoute("/cennik")({
