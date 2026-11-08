@@ -12,7 +12,7 @@ export function StickyCallBar() {
         <a
           href={BUSINESS.phoneHref}
           aria-label={"Zadzwoń " + BUSINESS.phone}
-          className="inline-flex flex-1 items-center justify-center gap-2 rounded-md bg-foreground px-5 py-3 text-sm font-semibold uppercase tracking-widest text-background"
+          className="inline-flex flex-1 items-center justify-center gap-2 rounded-md btn-signal btn-glow px-5 py-3 text-sm font-semibold uppercase tracking-widest"
         >
           <Phone className="h-4 w-4" aria-hidden="true" />
           Zadzwoń
@@ -21,7 +21,7 @@ export function StickyCallBar() {
           href={BUSINESS.maps}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 rounded-md border-silver px-5 py-3 text-sm font-semibold uppercase tracking-widest text-foreground"
+          className="inline-flex items-center justify-center gap-2 rounded-md btn-glow border-silver px-5 py-3 text-sm font-semibold uppercase tracking-widest text-foreground"
         >
           <MapPin className="h-4 w-4" aria-hidden="true" />
           Dojazd

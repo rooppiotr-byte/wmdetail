@@ -36,7 +36,7 @@ export function PricingSection({ asPage = false }: { asPage?: boolean }) {
     >
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-sm uppercase tracking-[0.35em] text-silver">Cennik</p>
+          <p className="eyebrow">Cennik</p>
 
           {asPage ? (
             <h1 className="mt-4 font-display text-5xl md:text-6xl font-bold">
@@ -57,8 +57,8 @@ export function PricingSection({ asPage = false }: { asPage?: boolean }) {
 
         <div className="mt-24">
           <div className="flex items-center gap-4 mb-10">
-            <div className="rounded-xl bg-silver/10 p-3">
-              <Sofa className="h-6 w-6 text-silver" />
+            <div className="rounded-xl bg-signal/10 p-3">
+              <Sofa className="h-6 w-6 text-signal" />
             </div>
 
             <div>
@@ -74,8 +74,8 @@ export function PricingSection({ asPage = false }: { asPage?: boolean }) {
 
         <div className="mt-28">
           <div className="flex items-center gap-4 mb-10">
-            <div className="rounded-xl bg-silver/10 p-3">
-              <Sparkles className="h-6 w-6 text-silver" />
+            <div className="rounded-xl bg-signal/10 p-3">
+              <Sparkles className="h-6 w-6 text-signal" />
             </div>
 
             <div>
@@ -91,8 +91,8 @@ export function PricingSection({ asPage = false }: { asPage?: boolean }) {
 
         <div className="mt-28">
           <div className="flex items-center gap-4 mb-10">
-            <div className="rounded-xl bg-silver/10 p-3">
-              <Car className="h-6 w-6 text-silver" />
+            <div className="rounded-xl bg-signal/10 p-3">
+              <Car className="h-6 w-6 text-signal" />
             </div>
 
             <div>
@@ -107,8 +107,8 @@ export function PricingSection({ asPage = false }: { asPage?: boolean }) {
         </div>
 
         <div className="mt-32">
-          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-10 lg:p-14 text-center">
-            <p className="text-sm uppercase tracking-[0.35em] text-silver">
+          <div className="rounded-3xl border border-white/10 bg-graphite p-10 lg:p-14 text-center">
+            <p className="eyebrow">
               Indywidualna wycena
             </p>
 

@@ -63,7 +63,7 @@ function ServicesHub() {
       <main className="pt-28 pb-20 px-6">
         <div className="max-w-5xl mx-auto">
           <Breadcrumbs items={[{ label: "Strona główna", to: "/" }, { label: "Usługi" }]} />
-          <p className="text-xs uppercase tracking-[0.4em] text-silver mb-4">— Usługi</p>
+          <p className="eyebrow mb-4">Usługi</p>
           <h1 className="font-display text-4xl sm:text-5xl font-bold mb-6">
             Usługi detailingowe w Dąbrowie Górniczej
           </h1>
@@ -115,7 +115,7 @@ function ServicesHub() {
             <p className="text-muted-foreground mb-6">Zadzwoń lub napisz, a przygotujemy bezpłatną wycenę.</p>
             <a
               href={BUSINESS.phoneHref}
-              className="inline-flex items-center gap-3 px-6 py-3 bg-foreground text-background rounded-md font-semibold uppercase tracking-widest text-sm hover:bg-silver-bright transition-colors"
+              className="inline-flex items-center gap-3 px-6 py-3 btn-signal btn-glow rounded-md font-semibold uppercase tracking-widest text-sm transition-colors"
             >
               <Phone className="w-4 h-4" aria-hidden="true" /> {BUSINESS.phone}
             </a>

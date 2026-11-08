@@ -30,8 +30,10 @@
   --color-ring: var(--ring);
   --color-silver: var(--silver);
   --color-silver-bright: var(--silver-bright);
-  --font-display: "Oswald", "Inter", sans-serif;
-  --font-sans: "Inter", sans-serif;
+  --color-signal: var(--signal);
+  --font-display: "Bricolage Grotesque", "Onest", sans-serif;
+  --font-hero: "Oswald", "Onest", sans-serif;
+  --font-sans: "Onest", "Inter", sans-serif;
 }
 
 :root {
@@ -43,25 +45,26 @@
   --card-foreground: oklch(0.96 0.005 250);
   --popover: oklch(0.17 0.006 250);
   --popover-foreground: oklch(0.96 0.005 250);
-  --primary: oklch(0.85 0.008 250);
-  --primary-foreground: oklch(0.13 0.005 250);
+  --primary: oklch(0.8 0.19 150);
+  --primary-foreground: oklch(0.18 0.04 150);
   --secondary: oklch(0.22 0.006 250);
   --secondary-foreground: oklch(0.96 0.005 250);
   --muted: oklch(0.22 0.006 250);
-  --muted-foreground: oklch(0.65 0.008 250);
+  --muted-foreground: oklch(0.72 0.008 250);
   --accent: oklch(0.78 0.012 250);
   --accent-foreground: oklch(0.13 0.005 250);
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.28 0.006 250 / 0.6);
   --input: oklch(0.22 0.006 250);
-  --ring: oklch(0.78 0.012 250);
+  --ring: oklch(0.8 0.19 150);
 
+  --signal: oklch(0.8 0.19 150);
   --silver: oklch(0.82 0.008 250);
   --silver-bright: oklch(0.95 0.005 250);
 
   --gradient-bg: radial-gradient(ellipse at top, oklch(0.2 0.008 250) 0%, oklch(0.1 0.004 250) 60%, oklch(0.08 0.003 250) 100%);
-  --gradient-silver: linear-gradient(135deg, oklch(0.95 0.005 250) 0%, oklch(0.7 0.01 250) 45%, oklch(0.92 0.005 250) 70%, oklch(0.55 0.012 250) 100%);
+  --gradient-silver: linear-gradient(135deg, oklch(0.95 0.005 250) 0%, oklch(0.8 0.01 250) 45%, oklch(0.93 0.005 250) 70%, oklch(0.76 0.012 250) 100%);
   --gradient-graphite: linear-gradient(180deg, oklch(0.18 0.006 250) 0%, oklch(0.11 0.004 250) 100%);
   --shadow-glow: 0 0 60px oklch(0.85 0.01 250 / 0.15);
   --shadow-card: 0 20px 60px -20px oklch(0 0 0 / 0.8);
@@ -90,12 +93,9 @@
   }
 }
 
+/* Mały tekst: jednolity kolor (kontrast ok. 10:1). Gradient tylko na dużych nagłówkach, patrz niżej. */
 @utility text-silver {
-  background: var(--gradient-silver);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: var(--silver);
 }
 
 @utility bg-graphite {
@@ -112,4 +112,72 @@
 
 @utility border-silver {
   border: 1px solid oklch(0.85 0.008 250 / 0.25);
+}
+
+:is(h1, h2, .font-hero) .text-silver {
+  background: var(--gradient-silver);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Etykieta sekcji z zielonym myślnikiem */
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: var(--silver);
+  &::before {
+    content: "";
+    width: 1.75rem;
+    height: 2px;
+    background: var(--signal);
+    flex-shrink: 0;
+  }
+}
+
+/* Zielony glow przy najechaniu i fokusie, na każdym przycisku */
+@utility btn-glow {
+  transition: box-shadow 0.25s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  &:hover,
+  &:focus-visible {
+    box-shadow: 0 0 0 1px oklch(0.8 0.19 150 / 0.55), 0 0 26px oklch(0.8 0.19 150 / 0.35);
+    border-color: oklch(0.8 0.19 150 / 0.7);
+  }
+}
+
+/* Zielony przycisk wypełniony (telefon, główne wezwania) */
+@utility btn-signal {
+  background: var(--signal);
+  color: oklch(0.18 0.04 150);
+  box-shadow: 0 0 18px oklch(0.8 0.19 150 / 0.18);
+  &:hover {
+    background: oklch(0.86 0.19 150);
+  }
+}
+
+@utility card-glow {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  &:hover {
+    box-shadow: var(--shadow-card), 0 0 32px oklch(0.8 0.19 150 / 0.12);
+    border-color: oklch(0.8 0.19 150 / 0.35);
+  }
+}
+
+@keyframes breathe {
+  0%, 100% { box-shadow: 0 0 14px oklch(0.8 0.19 150 / 0.16); }
+  50% { box-shadow: 0 0 34px oklch(0.8 0.19 150 / 0.4); }
+}
+
+@utility animate-breathe {
+  animation: breathe 9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-breathe { animation: none; }
+  html { scroll-behavior: auto; }
 }

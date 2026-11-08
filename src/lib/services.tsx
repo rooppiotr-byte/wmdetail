@@ -164,7 +164,7 @@ export function ServicePageLayout({ slug, children }: { slug: string; children?:
               { label: svc.title },
             ]}
           />
-          <p className="text-xs uppercase tracking-[0.4em] text-silver mb-4">— Usługa</p>
+          <p className="eyebrow mb-4">Usługa</p>
           <h1 className="font-display text-4xl sm:text-5xl font-bold mb-6">{svc.h1}</h1>
           <p className="text-lg text-muted-foreground mb-10">{svc.intro}</p>
 
@@ -221,7 +221,7 @@ export function ServicePageLayout({ slug, children }: { slug: string; children?:
           <div className="bg-graphite border-silver rounded-xl p-8 my-10">
             <h2 className="font-display text-2xl font-semibold mb-3">Umów termin</h2>
             <p className="text-muted-foreground mb-6">Zadzwoń lub napisz — dobierzemy zakres usługi do Twojego auta.</p>
-            <a href={BUSINESS.phoneHref} className="inline-flex items-center gap-3 px-6 py-3 bg-foreground text-background rounded-md font-semibold uppercase tracking-widest text-sm hover:bg-silver-bright transition-colors">
+            <a href={BUSINESS.phoneHref} className="inline-flex items-center gap-3 px-6 py-3 btn-signal btn-glow rounded-md font-semibold uppercase tracking-widest text-sm transition-colors">
               <Phone className="w-4 h-4" aria-hidden="true" /> {BUSINESS.phone}
             </a>
           </div>

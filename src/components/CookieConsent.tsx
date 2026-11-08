@@ -55,14 +55,14 @@ export function CookieConsent() {
         <button
           type="button"
           onClick={decline}
-          className="inline-flex items-center justify-center rounded-md border-silver px-6 py-3 text-sm font-semibold uppercase tracking-widest text-silver transition-colors hover:bg-secondary"
+          className="inline-flex items-center justify-center rounded-md btn-glow border-silver px-6 py-3 text-sm font-semibold uppercase tracking-widest text-silver hover:bg-secondary"
         >
           Odrzucam
         </button>
         <button
           type="button"
           onClick={accept}
-          className="inline-flex items-center justify-center rounded-md bg-foreground px-6 py-3 text-sm font-semibold uppercase tracking-widest text-background transition-colors hover:bg-silver-bright"
+          className="inline-flex items-center justify-center rounded-md btn-signal btn-glow px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-colors"
         >
           Akceptuję
         </button>

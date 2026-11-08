@@ -169,6 +169,7 @@ function Index() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/30" />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
+            <div className="absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-signal/10 blur-3xl" aria-hidden="true" />
           </div>
 
           <div className="relative max-w-7xl mx-auto px-6 py-32 w-full">
@@ -176,7 +177,7 @@ function Index() {
               <p className="text-xs uppercase tracking-[0.4em] text-silver mb-6">
                 Studio detailingu — Dąbrowa Górnicza
               </p>
-              <p className="font-display text-6xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] mb-6" aria-hidden="false">
+              <p className="font-hero text-6xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] mb-6" aria-hidden="false">
                 <span className="text-silver">ODPICUJEMY</span>
                 <br />
                 <span className="text-foreground">TWOJĄ FURĘ!</span>
@@ -188,11 +189,11 @@ function Index() {
                 Profesjonalny detailing samochodowy w Dąbrowie Górniczej — detailing wnętrza, korekta lakieru, powłoki ceramiczne i pranie tapicerki. Kompleksowa pielęgnacja Twojego auta w jednym studio.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="#kontakt" className="group inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-md font-semibold uppercase tracking-widest text-sm hover:bg-silver-bright transition-colors shadow-silver-glow">
+                <a href="#kontakt" className="group animate-breathe inline-flex items-center gap-3 px-8 py-4 btn-signal btn-glow rounded-md font-semibold uppercase tracking-widest text-sm">
                   Poproś o wycenę
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </a>
-                <a href={BUSINESS.phoneHref} aria-label={`Umów termin — zadzwoń ${BUSINESS.phone}`} className="inline-flex items-center gap-3 px-8 py-4 border-silver rounded-md font-semibold uppercase tracking-widest text-sm text-silver hover:bg-secondary transition-colors">
+                <a href={BUSINESS.phoneHref} aria-label={`Umów termin — zadzwoń ${BUSINESS.phone}`} className="btn-signal btn-glow inline-flex items-center gap-3 px-8 py-4 rounded-md font-semibold uppercase tracking-widest text-sm">
                   <Phone className="w-4 h-4" aria-hidden="true" /> Umów termin
                 </a>
               </div>
@@ -206,7 +207,7 @@ function Index() {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
               <div>
-                <p className="text-xs uppercase tracking-[0.4em] text-silver mb-4">— Usługi</p>
+                <p className="eyebrow mb-4">Usługi</p>
                 <h2 id="uslugi-heading" className="font-display text-5xl sm:text-6xl font-bold">
                   Co dla Ciebie <span className="text-silver">zrobimy</span>
                 </h2>
@@ -215,9 +216,9 @@ function Index() {
 
             <div className="grid md:grid-cols-2 gap-6">
               {services.map((s) => (
-                <article key={s.title} className="group relative overflow-hidden rounded-xl bg-graphite border-silver shadow-elegant p-8">
+                <article key={s.title} className="group relative overflow-hidden rounded-xl bg-graphite border-silver shadow-elegant card-glow p-8">
                   <div className="w-12 h-12 rounded-md bg-background/80 border-silver flex items-center justify-center mb-6">
-                    <s.icon className="w-5 h-5 text-silver" aria-hidden="true" />
+                    <s.icon className="w-5 h-5 text-signal" aria-hidden="true" />
                   </div>
                   <h3 className="font-display text-2xl font-semibold mb-3">
                     <Link to={s.to} className="hover:text-silver transition-colors">{s.title}</Link>
@@ -230,7 +231,7 @@ function Index() {
               ))}
             </div>
             <div className="mt-12 text-center">
-              <a href="#kontakt" className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-md font-semibold uppercase tracking-widest text-sm hover:bg-silver-bright transition-colors shadow-silver-glow">
+              <a href="#kontakt" className="inline-flex items-center gap-3 px-8 py-4 btn-signal btn-glow rounded-md font-semibold uppercase tracking-widest text-sm">
                 <Phone className="w-4 h-4" aria-hidden="true" /> Umów termin
               </a>
             </div>
@@ -241,7 +242,7 @@ function Index() {
         <section id="realizacje" className="relative py-32 px-6 bg-graphite" aria-labelledby="realizacje-heading">
           <div className="max-w-7xl mx-auto">
             <div className="mb-16">
-              <p className="text-xs uppercase tracking-[0.4em] text-silver mb-4">— Realizacje</p>
+              <p className="eyebrow mb-4">Realizacje</p>
               <h2 id="realizacje-heading" className="font-display text-5xl sm:text-6xl font-bold">
                 Nasza <span className="text-silver">robota</span>
               </h2>
@@ -261,7 +262,7 @@ function Index() {
               ))}
             </div>
             <div className="mt-12 text-center">
-              <a href="#kontakt" className="inline-flex items-center gap-3 px-8 py-4 border-silver rounded-md font-semibold uppercase tracking-widest text-sm text-silver hover:bg-secondary transition-colors">
+              <a href="#kontakt" className="inline-flex items-center gap-3 px-8 py-4 btn-glow border-silver rounded-md font-semibold uppercase tracking-widest text-sm text-silver hover:bg-secondary">
                 <Phone className="w-4 h-4" aria-hidden="true" /> Umów termin
               </a>
             </div>
@@ -272,7 +273,7 @@ function Index() {
         <section id="kontakt" className="relative py-32 px-6" aria-labelledby="kontakt-heading">
           <div className="max-w-7xl mx-auto">
             <div className="mb-16">
-              <p className="text-xs uppercase tracking-[0.4em] text-silver mb-4">— Kontakt</p>
+              <p className="eyebrow mb-4">Kontakt</p>
               <h2 id="kontakt-heading" className="font-display text-5xl sm:text-6xl font-bold">
                 Zarezerwuj <span className="text-silver">termin</span>
               </h2>
@@ -282,7 +283,7 @@ function Index() {
               <div className="bg-graphite border-silver rounded-xl p-10 shadow-elegant space-y-8">
                 <a href={BUSINESS.phoneHref} className="flex items-start gap-5 group" aria-label={`Zadzwoń ${BUSINESS.phone}`}>
                   <div className="w-12 h-12 shrink-0 rounded-md bg-background border-silver flex items-center justify-center group-hover:bg-secondary transition-colors">
-                    <Phone className="w-5 h-5 text-silver" aria-hidden="true" />
+                    <Phone className="w-5 h-5 text-signal" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-1">Telefon</p>
@@ -292,7 +293,7 @@ function Index() {
 
                 <a href={`mailto:${BUSINESS.email}`} className="flex items-start gap-5 group" aria-label={`Wyślij e-mail na ${BUSINESS.email}`}>
                   <div className="w-12 h-12 shrink-0 rounded-md bg-background border-silver flex items-center justify-center group-hover:bg-secondary transition-colors">
-                    <Mail className="w-5 h-5 text-silver" aria-hidden="true" />
+                    <Mail className="w-5 h-5 text-signal" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-1">E-mail</p>
@@ -302,7 +303,7 @@ function Index() {
 
                 <address className="flex items-start gap-5 not-italic">
                   <div className="w-12 h-12 shrink-0 rounded-md bg-background border-silver flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-silver" aria-hidden="true" />
+                    <MapPin className="w-5 h-5 text-signal" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-1">Adres</p>
@@ -311,9 +312,9 @@ function Index() {
                   </div>
                 </address>
 
-                <a href={BUSINESS.instagram} target="_blank" rel="noopener noreferrer" className="flex items-start gap-5 group" aria-label="Instagram WM Detail">
+                <a href={BUSINESS.instagram} target="_blank" rel="noopener noreferrer" className="flex items-start gap-5 group" aria-label="Instagram @wmdetail.dg">
                   <div className="w-12 h-12 shrink-0 rounded-md bg-background border-silver flex items-center justify-center group-hover:bg-secondary transition-colors">
-                    <Instagram className="w-5 h-5 text-silver" aria-hidden="true" />
+                    <Instagram className="w-5 h-5 text-signal" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-1">Instagram</p>
@@ -326,10 +327,10 @@ function Index() {
                     <Clock className="w-4 h-4" aria-hidden="true" /> Godziny otwarcia
                   </p>
                   <div className="flex justify-between text-foreground">
-                    <span>Pon — Pt</span><span className="text-silver">08:00 — 16:00</span>
+                    <span>Pon — Pt</span><span className="text-signal">08:00 — 16:00</span>
                   </div>
                   <div className="flex justify-between text-foreground mt-1">
-                    <span>Sobota</span><span className="text-silver">09:00 — 14:00</span>
+                    <span>Sobota</span><span className="text-signal">09:00 — 14:00</span>
                   </div>
                   <div className="flex justify-between text-muted-foreground mt-1">
                     <span>Niedziela</span><span>Zamknięte</span>
@@ -353,7 +354,7 @@ function Index() {
         {/* OBSZAR DZIAŁANIA */}
         <section id="obszar" className="relative py-24 px-6 bg-graphite" aria-labelledby="obszar-heading">
           <div className="max-w-5xl mx-auto text-center">
-            <p className="text-xs uppercase tracking-[0.4em] text-silver mb-4">— Obszar działania</p>
+            <p className="eyebrow mb-4">Obszar działania</p>
             <h2 id="obszar-heading" className="font-display text-4xl sm:text-5xl font-bold mb-6">
               Studio w <span className="text-silver">Dąbrowie Górniczej</span>
             </h2>
@@ -368,7 +369,7 @@ function Index() {
                 <li key={c} className="px-4 py-2 rounded-md border-silver text-sm uppercase tracking-widest text-silver">{c}</li>
               ))}
             </ul>
-            <a href={BUSINESS.phoneHref} className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-md font-semibold uppercase tracking-widest text-sm hover:bg-silver-bright transition-colors shadow-silver-glow">
+            <a href={BUSINESS.phoneHref} className="inline-flex items-center gap-3 px-8 py-4 btn-signal btn-glow rounded-md font-semibold uppercase tracking-widest text-sm">
               <Phone className="w-4 h-4" aria-hidden="true" /> Zadzwoń teraz
             </a>
           </div>

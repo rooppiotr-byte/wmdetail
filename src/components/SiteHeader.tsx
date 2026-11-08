@@ -31,7 +31,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href={BUSINESS.phoneHref} aria-label={'Zadzwoń ' + BUSINESS.phone} className="hidden items-center gap-2 rounded-md bg-foreground px-4 py-2 text-xs font-semibold uppercase tracking-widest text-background shadow-silver-glow transition-colors hover:bg-silver-bright sm:inline-flex sm:px-5 sm:py-2.5 sm:text-sm">
+          <a href={BUSINESS.phoneHref} aria-label={'Zadzwoń ' + BUSINESS.phone} className="hidden items-center gap-2 rounded-md btn-signal btn-glow px-4 py-2 text-xs font-semibold uppercase tracking-widest sm:inline-flex sm:px-5 sm:py-2.5 sm:text-sm">
             <Phone className="h-4 w-4" aria-hidden="true" />
             <span>{BUSINESS.phone}</span>
           </a>
@@ -52,7 +52,7 @@ export function SiteHeader() {
               </li>
             ))}
             <li className="pt-3">
-              <a href={BUSINESS.phoneHref} className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-foreground px-5 py-3 text-sm font-semibold uppercase tracking-widest text-background">
+              <a href={BUSINESS.phoneHref} className="inline-flex w-full items-center justify-center gap-2 rounded-md btn-signal btn-glow px-5 py-3 text-sm font-semibold uppercase tracking-widest">
                 <Phone className="h-4 w-4" aria-hidden="true" />
                 Zadzwoń: {BUSINESS.phone}
               </a>
