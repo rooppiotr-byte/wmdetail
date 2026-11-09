@@ -189,12 +189,12 @@ function Index() {
                 Profesjonalny detailing samochodowy w Dąbrowie Górniczej — detailing wnętrza, korekta lakieru, powłoki ceramiczne i pranie tapicerki. Kompleksowa pielęgnacja Twojego auta w jednym studio.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="#kontakt" className="group animate-breathe inline-flex items-center gap-3 px-8 py-4 btn-signal btn-glow rounded-md font-semibold uppercase tracking-widest text-sm">
+                <a href={BUSINESS.phoneHref} aria-label={`Umów termin — zadzwoń ${BUSINESS.phone}`} className="animate-breathe btn-signal btn-glow inline-flex items-center gap-3 px-8 py-4 rounded-md font-semibold uppercase tracking-widest text-sm">
+                  <Phone className="w-4 h-4" aria-hidden="true" /> Umów termin
+                </a>
+                <a href="#kontakt" className="group btn-glow inline-flex items-center gap-3 px-8 py-4 border-silver rounded-md font-semibold uppercase tracking-widest text-sm text-silver hover:bg-secondary">
                   Poproś o wycenę
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-                </a>
-                <a href={BUSINESS.phoneHref} aria-label={`Umów termin — zadzwoń ${BUSINESS.phone}`} className="btn-signal btn-glow inline-flex items-center gap-3 px-8 py-4 rounded-md font-semibold uppercase tracking-widest text-sm">
-                  <Phone className="w-4 h-4" aria-hidden="true" /> Umów termin
                 </a>
               </div>
               <p className="mt-5 text-sm text-muted-foreground">Bezpłatna wycena po kontakcie telefonicznym lub przesłaniu zdjęć auta.</p>
