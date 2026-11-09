@@ -81,7 +81,7 @@
 
   body {
     background: var(--gradient-bg);
-    background-attachment: fixed;
+    background-attachment: scroll;
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -129,7 +129,7 @@
   gap: 0.75rem;
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.22em;
   color: var(--silver);
   &::before {
     content: "";
@@ -191,4 +191,11 @@
     background: var(--signal);
     flex-shrink: 0;
   }
+}
+
+@media (min-width: 768px) {
+  body { background-attachment: fixed; }
+}
+@media (min-width: 640px) {
+  .eyebrow { letter-spacing: 0.4em; }
 }

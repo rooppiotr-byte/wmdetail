@@ -157,7 +157,7 @@ function Index() {
 
       <main id="top">
         {/* HERO */}
-        <section className="relative min-h-screen flex items-center pt-20" aria-labelledby="hero-heading">
+        <section className="relative min-h-[100svh] flex items-center pt-20" aria-labelledby="hero-heading">
           <div className="absolute inset-0">
             <img
               src={heroCar}
@@ -172,12 +172,12 @@ function Index() {
             <div className="absolute left-1/2 -translate-x-1/2 bottom-0 h-96 w-[40rem] max-w-full rounded-full bg-signal/10 blur-3xl" aria-hidden="true" />
           </div>
 
-          <div className="relative max-w-7xl mx-auto px-6 py-32 w-full">
+          <div className="relative max-w-7xl mx-auto px-6 py-24 sm:py-32 w-full">
             <div className="max-w-6xl mx-auto text-center">
               <p className="eyebrow eyebrow-c mb-6">
-                Studio detailingu — Dąbrowa Górnicza
+                Studio w Dąbrowie Górniczej
               </p>
-              <p className="font-hero text-[3.2rem] sm:text-8xl lg:text-9xl xl:text-[10rem] font-bold tracking-tight leading-[0.95] mb-6" aria-hidden="false">
+              <p className="font-hero text-[12vw] sm:text-[10vw] lg:text-9xl xl:text-[10rem] font-bold tracking-tight leading-[0.95] mb-6" aria-hidden="false">
                 <span className="text-silver">ODPICUJEMY</span>
                 <br />
                 <span className="text-foreground">TWOJĄ FURĘ!</span>
@@ -188,11 +188,11 @@ function Index() {
               <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed mb-10">
                 Profesjonalny detailing samochodowy w Dąbrowie Górniczej — detailing wnętrza, korekta lakieru, powłoki ceramiczne i pranie tapicerki. Kompleksowa pielęgnacja Twojego auta w jednym studio.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <a href={BUSINESS.phoneHref} aria-label={`Umów termin — zadzwoń ${BUSINESS.phone}`} className="animate-breathe btn-signal btn-glow inline-flex items-center gap-3 px-8 py-4 rounded-md font-semibold uppercase tracking-widest text-sm">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center justify-center gap-4">
+                <a href={BUSINESS.phoneHref} aria-label={`Umów termin — zadzwoń ${BUSINESS.phone}`} className="animate-breathe btn-signal btn-glow inline-flex justify-center items-center gap-3 px-8 py-4 rounded-md font-semibold uppercase tracking-widest text-sm">
                   <Phone className="w-4 h-4" aria-hidden="true" /> Umów termin
                 </a>
-                <a href="#kontakt" className="group btn-glow inline-flex items-center gap-3 px-8 py-4 border-silver rounded-md font-semibold uppercase tracking-widest text-sm text-silver hover:bg-secondary">
+                <a href="#kontakt" className="group btn-glow inline-flex justify-center items-center gap-3 px-8 py-4 border-silver rounded-md font-semibold uppercase tracking-widest text-sm text-silver hover:bg-secondary">
                   Poproś o wycenę
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </a>
@@ -203,12 +203,12 @@ function Index() {
         </section>
 
         {/* USLUGI */}
-        <section id="uslugi" className="relative py-32 px-6" aria-labelledby="uslugi-heading">
+        <section id="uslugi" className="relative py-20 sm:py-32 px-6" aria-labelledby="uslugi-heading">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col items-center text-center gap-6 mb-16">
               <div>
                 <p className="eyebrow eyebrow-c mb-4">Usługi</p>
-                <h2 id="uslugi-heading" className="font-display text-5xl sm:text-6xl font-bold">
+                <h2 id="uslugi-heading" className="font-display text-4xl sm:text-5xl md:text-6xl font-bold">
                   Co dla Ciebie <span className="text-silver">zrobimy</span>
                 </h2>
               </div>
@@ -239,11 +239,11 @@ function Index() {
         </section>
 
         {/* REALIZACJE */}
-        <section id="realizacje" className="relative py-32 px-6 bg-graphite" aria-labelledby="realizacje-heading">
+        <section id="realizacje" className="relative py-20 sm:py-32 px-6 bg-graphite" aria-labelledby="realizacje-heading">
           <div className="max-w-7xl mx-auto">
             <div className="mb-16 text-center">
               <p className="eyebrow eyebrow-c mb-4">Realizacje</p>
-              <h2 id="realizacje-heading" className="font-display text-5xl sm:text-6xl font-bold">
+              <h2 id="realizacje-heading" className="font-display text-4xl sm:text-5xl md:text-6xl font-bold">
                 Nasza <span className="text-silver">robota</span>
               </h2>
             </div>
@@ -270,24 +270,24 @@ function Index() {
         </section>
 <PricingSection />
         {/* KONTAKT + MAPA */}
-        <section id="kontakt" className="relative py-32 px-6" aria-labelledby="kontakt-heading">
+        <section id="kontakt" className="relative py-20 sm:py-32 px-6" aria-labelledby="kontakt-heading">
           <div className="max-w-7xl mx-auto">
             <div className="mb-16 text-center">
               <p className="eyebrow eyebrow-c mb-4">Kontakt</p>
-              <h2 id="kontakt-heading" className="font-display text-5xl sm:text-6xl font-bold">
+              <h2 id="kontakt-heading" className="font-display text-4xl sm:text-5xl md:text-6xl font-bold">
                 Zarezerwuj <span className="text-silver">termin</span>
               </h2>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
-              <div className="bg-graphite border-silver rounded-xl p-10 shadow-elegant space-y-8">
+              <div className="bg-graphite border-silver rounded-xl p-6 sm:p-10 shadow-elegant space-y-8">
                 <a href={BUSINESS.phoneHref} className="flex items-start gap-5 group" aria-label={`Zadzwoń ${BUSINESS.phone}`}>
                   <div className="w-12 h-12 shrink-0 rounded-md bg-background border-silver flex items-center justify-center group-hover:bg-secondary transition-colors">
                     <Phone className="w-5 h-5 text-signal" aria-hidden="true" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-1">Telefon</p>
-                    <p className="font-display text-2xl">{BUSINESS.phone}</p>
+                    <p className="font-display text-xl sm:text-2xl break-words">{BUSINESS.phone}</p>
                   </div>
                 </a>
 
@@ -295,9 +295,9 @@ function Index() {
                   <div className="w-12 h-12 shrink-0 rounded-md bg-background border-silver flex items-center justify-center group-hover:bg-secondary transition-colors">
                     <Mail className="w-5 h-5 text-signal" aria-hidden="true" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-1">E-mail</p>
-                    <p className="font-display text-2xl">{BUSINESS.email}</p>
+                    <p className="font-display text-xl sm:text-2xl break-words">{BUSINESS.email}</p>
                   </div>
                 </a>
 
@@ -305,9 +305,9 @@ function Index() {
                   <div className="w-12 h-12 shrink-0 rounded-md bg-background border-silver flex items-center justify-center">
                     <MapPin className="w-5 h-5 text-signal" aria-hidden="true" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-1">Adres</p>
-                    <p className="font-display text-2xl">{BUSINESS.street}</p>
+                    <p className="font-display text-xl sm:text-2xl break-words">{BUSINESS.street}</p>
                     <p className="text-muted-foreground">{BUSINESS.postalCode} {BUSINESS.city}</p>
                   </div>
                 </address>
@@ -316,9 +316,9 @@ function Index() {
                   <div className="w-12 h-12 shrink-0 rounded-md bg-background border-silver flex items-center justify-center group-hover:bg-secondary transition-colors">
                     <Instagram className="w-5 h-5 text-signal" aria-hidden="true" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-1">Instagram</p>
-                    <p className="font-display text-2xl">@wmdetail.dg</p>
+                    <p className="font-display text-xl sm:text-2xl break-words">@wmdetail.dg</p>
                   </div>
                 </a>
 
@@ -338,11 +338,11 @@ function Index() {
                 </div>
               </div>
 
-              <div className="rounded-xl overflow-hidden border-silver shadow-elegant min-h-[500px]">
+              <div className="rounded-xl overflow-hidden border-silver shadow-elegant min-h-[360px] sm:min-h-[500px]">
                 <iframe
                   title="Mapa dojazdu — WM Detail Car Detailing, Dąbrowa Górnicza"
                   src="https://www.google.com/maps?q=ul.+%C5%9Aw.+Antoniego+166,+41-303+D%C4%85browa+G%C3%B3rnicza&output=embed"
-                  className="w-full h-full min-h-[500px] grayscale contrast-125"
+                  className="w-full h-full min-h-[360px] sm:min-h-[500px] grayscale contrast-125"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />

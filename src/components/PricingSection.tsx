@@ -32,14 +32,14 @@ export function PricingSection({ asPage = false }: { asPage?: boolean }) {
   return (
     <section
       id="cennik"
-      className={asPage ? "pt-12 pb-28" : "py-28 border-t border-white/10"}
+      className={asPage ? "pt-12 pb-28" : "py-20 sm:py-28 border-t border-white/10"}
     >
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
           <p className="eyebrow eyebrow-c">Cennik</p>
 
           {asPage ? (
-            <h1 className="mt-4 font-display text-5xl md:text-6xl font-bold">
+            <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl font-bold">
               Cennik detailingu w Dąbrowie Górniczej
             </h1>
           ) : (
@@ -107,12 +107,12 @@ export function PricingSection({ asPage = false }: { asPage?: boolean }) {
         </div>
 
         <div className="mt-32">
-          <div className="rounded-3xl border border-white/10 bg-graphite p-10 lg:p-14 text-center">
+          <div className="rounded-3xl border border-white/10 bg-graphite p-6 sm:p-10 lg:p-14 text-center">
             <p className="eyebrow eyebrow-c">
               Indywidualna wycena
             </p>
 
-            <h3 className="mt-4 text-4xl font-bold">
+            <h3 className="mt-4 text-3xl sm:text-4xl font-bold">
               Nie znalazłeś interesującej Cię usługi?
             </h3>
 

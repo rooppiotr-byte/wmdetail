@@ -41,7 +41,7 @@ export function CookieConsent() {
       role="dialog"
       aria-live="polite"
       aria-label="Zgoda na pliki cookies"
-      className="fixed inset-x-4 bottom-4 z-[60] mx-auto max-w-3xl rounded-xl border-silver bg-graphite p-5 shadow-elegant sm:p-6"
+      className="fixed inset-x-4 bottom-24 md:bottom-4 z-[60] mx-auto max-w-3xl rounded-xl border-silver bg-graphite p-5 shadow-elegant sm:p-6"
     >
       <p className="text-sm leading-relaxed text-muted-foreground">
         Używamy plików cookies Google Analytics, aby mierzyć ruch na stronie i ją ulepszać. Uruchomimy je
