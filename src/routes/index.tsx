@@ -173,11 +173,11 @@ function Index() {
           </div>
 
           <div className="relative max-w-7xl mx-auto px-6 py-32 w-full">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-6xl mx-auto text-center">
               <p className="eyebrow eyebrow-c mb-6">
                 Studio detailingu — Dąbrowa Górnicza
               </p>
-              <p className="font-hero text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-6" aria-hidden="false">
+              <p className="font-hero text-[3.2rem] sm:text-8xl lg:text-9xl xl:text-[10rem] font-bold tracking-tight leading-[0.95] mb-6" aria-hidden="false">
                 <span className="text-silver">ODPICUJEMY</span>
                 <br />
                 <span className="text-foreground">TWOJĄ FURĘ!</span>
