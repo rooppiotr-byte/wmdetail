@@ -36,7 +36,7 @@ export function PricingSection({ asPage = false }: { asPage?: boolean }) {
     >
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="eyebrow">Cennik</p>
+          <p className="eyebrow eyebrow-c">Cennik</p>
 
           {asPage ? (
             <h1 className="mt-4 font-display text-5xl md:text-6xl font-bold">
@@ -108,7 +108,7 @@ export function PricingSection({ asPage = false }: { asPage?: boolean }) {
 
         <div className="mt-32">
           <div className="rounded-3xl border border-white/10 bg-graphite p-10 lg:p-14 text-center">
-            <p className="eyebrow">
+            <p className="eyebrow eyebrow-c">
               Indywidualna wycena
             </p>
 

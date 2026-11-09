@@ -32,7 +32,7 @@
   --color-silver-bright: var(--silver-bright);
   --color-signal: var(--signal);
   --font-display: "Bricolage Grotesque", "Onest", sans-serif;
-  --font-hero: "Oswald", "Onest", sans-serif;
+  --font-hero: "Inter Tight", "Onest", sans-serif;
   --font-sans: "Onest", "Inter", sans-serif;
 }
 
@@ -180,4 +180,15 @@
 @media (prefers-reduced-motion: reduce) {
   .animate-breathe { animation: none; }
   html { scroll-behavior: auto; }
+}
+
+/* Wersja wyśrodkowana: myślnik po obu stronach */
+@utility eyebrow-c {
+  &::after {
+    content: "";
+    width: 1.75rem;
+    height: 2px;
+    background: var(--signal);
+    flex-shrink: 0;
+  }
 }

@@ -167,17 +167,17 @@ function Index() {
               height={1088}
               fetchPriority="high"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/30" />
+            <div className="absolute inset-0 bg-background/65" />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
-            <div className="absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-signal/10 blur-3xl" aria-hidden="true" />
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-0 h-96 w-[40rem] max-w-full rounded-full bg-signal/10 blur-3xl" aria-hidden="true" />
           </div>
 
           <div className="relative max-w-7xl mx-auto px-6 py-32 w-full">
-            <div className="max-w-3xl">
-              <p className="text-xs uppercase tracking-[0.4em] text-silver mb-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="eyebrow eyebrow-c mb-6">
                 Studio detailingu — Dąbrowa Górnicza
               </p>
-              <p className="font-hero text-6xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] mb-6" aria-hidden="false">
+              <p className="font-hero text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-6" aria-hidden="false">
                 <span className="text-silver">ODPICUJEMY</span>
                 <br />
                 <span className="text-foreground">TWOJĄ FURĘ!</span>
@@ -185,10 +185,10 @@ function Index() {
               <h1 id="hero-heading" className="font-display text-2xl sm:text-3xl font-semibold text-foreground/90 mb-6">
                 Detailing samochodowy Dąbrowa Górnicza
               </h1>
-              <p className="text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed mb-10">
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed mb-10">
                 Profesjonalny detailing samochodowy w Dąbrowie Górniczej — detailing wnętrza, korekta lakieru, powłoki ceramiczne i pranie tapicerki. Kompleksowa pielęgnacja Twojego auta w jednym studio.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <a href={BUSINESS.phoneHref} aria-label={`Umów termin — zadzwoń ${BUSINESS.phone}`} className="animate-breathe btn-signal btn-glow inline-flex items-center gap-3 px-8 py-4 rounded-md font-semibold uppercase tracking-widest text-sm">
                   <Phone className="w-4 h-4" aria-hidden="true" /> Umów termin
                 </a>
@@ -205,9 +205,9 @@ function Index() {
         {/* USLUGI */}
         <section id="uslugi" className="relative py-32 px-6" aria-labelledby="uslugi-heading">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+            <div className="flex flex-col items-center text-center gap-6 mb-16">
               <div>
-                <p className="eyebrow mb-4">Usługi</p>
+                <p className="eyebrow eyebrow-c mb-4">Usługi</p>
                 <h2 id="uslugi-heading" className="font-display text-5xl sm:text-6xl font-bold">
                   Co dla Ciebie <span className="text-silver">zrobimy</span>
                 </h2>
@@ -241,8 +241,8 @@ function Index() {
         {/* REALIZACJE */}
         <section id="realizacje" className="relative py-32 px-6 bg-graphite" aria-labelledby="realizacje-heading">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-16">
-              <p className="eyebrow mb-4">Realizacje</p>
+            <div className="mb-16 text-center">
+              <p className="eyebrow eyebrow-c mb-4">Realizacje</p>
               <h2 id="realizacje-heading" className="font-display text-5xl sm:text-6xl font-bold">
                 Nasza <span className="text-silver">robota</span>
               </h2>
@@ -272,8 +272,8 @@ function Index() {
         {/* KONTAKT + MAPA */}
         <section id="kontakt" className="relative py-32 px-6" aria-labelledby="kontakt-heading">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-16">
-              <p className="eyebrow mb-4">Kontakt</p>
+            <div className="mb-16 text-center">
+              <p className="eyebrow eyebrow-c mb-4">Kontakt</p>
               <h2 id="kontakt-heading" className="font-display text-5xl sm:text-6xl font-bold">
                 Zarezerwuj <span className="text-silver">termin</span>
               </h2>
@@ -354,7 +354,7 @@ function Index() {
         {/* OBSZAR DZIAŁANIA */}
         <section id="obszar" className="relative py-24 px-6 bg-graphite" aria-labelledby="obszar-heading">
           <div className="max-w-5xl mx-auto text-center">
-            <p className="eyebrow mb-4">Obszar działania</p>
+            <p className="eyebrow eyebrow-c mb-4">Obszar działania</p>
             <h2 id="obszar-heading" className="font-display text-4xl sm:text-5xl font-bold mb-6">
               Studio w <span className="text-silver">Dąbrowie Górniczej</span>
             </h2>
