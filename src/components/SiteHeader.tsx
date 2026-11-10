@@ -5,10 +5,13 @@ import { Menu, Phone, X } from "lucide-react";
 import logoAsset from "@/assets/wm-detail-logo.png";
 import { BUSINESS } from "@/lib/site";
 
-const navigation = [
+type NavItem = { label: string; hash?: string; to?: string };
+
+const navigation: NavItem[] = [
   { label: "Usługi", hash: "uslugi" },
   { label: "Realizacje", hash: "realizacje" },
   { label: "Cennik", hash: "cennik" },
+  { label: "O nas", to: "/o-nas" },
   { label: "Kontakt", hash: "kontakt" },
 ];
 
@@ -22,9 +25,9 @@ export function SiteHeader() {
           <img src={logoAsset} alt="WM Detail Car Detailing — logo" className="h-14 w-auto sm:h-[4.5rem]" width={2048} height={655} />
         </Link>
 
-        <nav aria-label="Główna" className="hidden items-center gap-8 text-sm font-medium uppercase tracking-widest text-muted-foreground md:flex">
+        <nav aria-label="Główna" className="hidden items-center gap-6 xl:gap-8 text-sm font-medium uppercase tracking-widest text-muted-foreground lg:flex">
           {navigation.map((item) => (
-            <Link key={item.hash} to="/" hash={item.hash} className="transition-colors hover:text-foreground">
+            <Link key={item.label} to={(item.to ?? "/") as any} hash={item.hash} className="transition-colors hover:text-foreground">
               {item.label}
             </Link>
           ))}
@@ -35,18 +38,18 @@ export function SiteHeader() {
             <Phone className="h-4 w-4" aria-hidden="true" />
             <span>{BUSINESS.phone}</span>
           </a>
-          <button type="button" className="inline-flex h-11 w-11 items-center justify-center rounded-md border-silver text-foreground md:hidden" aria-label={isMenuOpen ? "Zamknij menu" : "Otwórz menu"} aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen((open) => !open)}>
+          <button type="button" className="inline-flex h-11 w-11 items-center justify-center rounded-md border-silver text-foreground lg:hidden" aria-label={isMenuOpen ? "Zamknij menu" : "Otwórz menu"} aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen((open) => !open)}>
             {isMenuOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
           </button>
         </div>
       </div>
 
       {isMenuOpen && (
-        <nav aria-label="Menu mobilne" className="border-t border-border bg-background px-6 py-5 md:hidden">
+        <nav aria-label="Menu mobilne" className="border-t border-border bg-background px-6 py-5 lg:hidden">
           <ul className="mx-auto max-w-7xl space-y-1">
             {navigation.map((item) => (
-              <li key={item.hash}>
-                <Link to="/" hash={item.hash} onClick={() => setIsMenuOpen(false)} className="block rounded-md px-4 py-3 text-sm font-semibold uppercase tracking-widest text-foreground transition-colors hover:bg-secondary">
+              <li key={item.label}>
+                <Link to={(item.to ?? "/") as any} hash={item.hash} onClick={() => setIsMenuOpen(false)} className="block rounded-md px-4 py-3 text-sm font-semibold uppercase tracking-widest text-foreground transition-colors hover:bg-secondary">
                   {item.label}
                 </Link>
               </li>

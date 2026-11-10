@@ -17,15 +17,18 @@ const BLOCKS = [
   },
 ];
 
-export function AboutSection() {
+export function AboutSection({ asPage = false }: { asPage?: boolean }) {
+  // Na osobnej stronie /o-nas nagłówek główny to h1, a bloki to h2 (bez przeskoku poziomów)
+  const Title = asPage ? "h1" : "h2";
+  const BlockTitle = asPage ? "h2" : "h3";
   return (
-    <section id="o-nas" className="relative py-20 sm:py-32 px-6 bg-graphite" aria-labelledby="o-nas-heading">
+    <section id="o-nas" className={`relative px-6 bg-graphite ${asPage ? "pt-36 sm:pt-44 pb-20 sm:pb-32" : "py-20 sm:py-32"}`} aria-labelledby="o-nas-heading">
       <div className="max-w-5xl mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <p className="eyebrow eyebrow-c mb-4">O nas</p>
-          <h2 id="o-nas-heading" className="font-display text-4xl sm:text-5xl md:text-6xl font-bold">
+          <Title id="o-nas-heading" className="font-display text-4xl sm:text-5xl md:text-6xl font-bold">
             O <span className="text-silver">studiu</span>
-          </h2>
+          </Title>
           <p className="mt-8 text-lg text-muted-foreground leading-relaxed">
             WM Detail to nowe, szybko rozwijające się studio detailingu w Dąbrowie Górniczej, przy {BUSINESS.street}.
             W krótkim czasie obsłużyliśmy wiele aut premium, m.in. Lucida i Teslę. Zajmujemy się myciem
@@ -36,7 +39,7 @@ export function AboutSection() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {BLOCKS.map((b) => (
             <div key={b.title} className="rounded-xl bg-background/60 border-silver p-8 card-glow">
-              <h3 className="font-display text-2xl font-semibold mb-3">{b.title}</h3>
+              <BlockTitle className="font-display text-2xl font-semibold mb-3">{b.title}</BlockTitle>
               <p className="text-muted-foreground leading-relaxed">{b.text}</p>
             </div>
           ))}

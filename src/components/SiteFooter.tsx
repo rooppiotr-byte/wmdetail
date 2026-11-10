@@ -25,6 +25,7 @@ export function SiteFooter() {
             <li><Link to="/uslugi/mycie-detailingowe" className="hover:text-foreground">Mycie detailingowe</Link></li>
             <li><Link to={"/uslugi/" as any} className="hover:text-foreground">Wszystkie usługi</Link></li>
             <li><Link to={"/cennik" as any} className="hover:text-foreground">Cennik</Link></li>
+            <li><Link to={"/o-nas" as any} className="hover:text-foreground">O nas</Link></li>
           </ul>
         </nav>
 

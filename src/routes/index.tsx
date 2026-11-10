@@ -17,7 +17,6 @@ import portfolio10 from "@/assets/mycie-lucidgt.webp";
 import portfolio11 from "@/assets/wizytowka-wmdetail.webp";
 import logoAsset from "@/assets/wm-detail-logo.png";
 import { PricingSection } from "@/components/PricingSection";
-import { AboutSection } from "@/components/AboutSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -271,7 +270,6 @@ function Index() {
           </div>
         </section>
 <ReviewsSection />
-        <AboutSection />
         <PricingSection />
         {/* KONTAKT + MAPA */}
         <section id="kontakt" className="relative py-20 sm:py-32 px-6" aria-labelledby="kontakt-heading">
