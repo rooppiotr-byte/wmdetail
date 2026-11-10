@@ -224,7 +224,7 @@ function Index() {
                     <Link to={s.to} className="hover:text-silver transition-colors">{s.title}</Link>
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">{s.desc}</p>
-                  <Link to={s.to} className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-silver hover:text-foreground">
+                  <Link to={s.to} className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-silver underline underline-offset-4 decoration-signal/60 hover:text-foreground">
                     Dowiedz się więcej <ArrowRight className="w-4 h-4" aria-hidden="true" />
                   </Link>
                 </article>
