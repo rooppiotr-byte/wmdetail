@@ -29,6 +29,8 @@ function PriceGroup({ items }: { items: PriceItem[] }) {
  * na osobnej stronie /cennik (asPage) nagłówek jest h1.
  */
 export function PricingSection({ asPage = false }: { asPage?: boolean }) {
+  // Na /cennik h1 jest nagłówkiem strony, więc grupy cen to h2 (bez przeskoku do h3)
+  const Group = asPage ? "h2" : "h3";
   return (
     <section
       id="cennik"
@@ -62,7 +64,7 @@ export function PricingSection({ asPage = false }: { asPage?: boolean }) {
             </div>
 
             <div>
-              <h3 className="text-3xl font-bold">Wnętrze</h3>
+              <Group className="text-3xl font-bold">Wnętrze</Group>
               <p className="text-muted-foreground">
                 Kompleksowy detailing, pranie i ozonowanie wnętrza.
               </p>
@@ -79,7 +81,7 @@ export function PricingSection({ asPage = false }: { asPage?: boolean }) {
             </div>
 
             <div>
-              <h3 className="text-3xl font-bold">Lakier</h3>
+              <Group className="text-3xl font-bold">Lakier</Group>
               <p className="text-muted-foreground">
                 Korekta, powłoki ceramiczne i przywracanie głębi koloru.
               </p>
@@ -96,7 +98,7 @@ export function PricingSection({ asPage = false }: { asPage?: boolean }) {
             </div>
 
             <div>
-              <h3 className="text-3xl font-bold">Zewnętrze</h3>
+              <Group className="text-3xl font-bold">Zewnętrze</Group>
               <p className="text-muted-foreground">
                 Kompleksowa pielęgnacja karoserii oraz elementów zewnętrznych.
               </p>

@@ -6,9 +6,9 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ALL_SERVICES } from "@/lib/services";
 import { BUSINESS, SITE_URL } from "@/lib/site";
 
-const TITLE = "Usługi detailingowe Dąbrowa Górnicza | WM Detail Car Detailing";
+const TITLE = "Usługi detailingowe Dąbrowa Górnicza | WM Detail";
 const DESCRIPTION =
-  "Wszystkie usługi WM Detail w Dąbrowie Górniczej: detailing wnętrza, korekta lakieru, powłoki ceramiczne, pranie tapicerki i mycie detailingowe.";
+  "Pięć usług w jednym studiu w Dąbrowie Górniczej: wnętrze, korekta lakieru, powłoki ceramiczne, pranie tapicerki i mycie. Bezpłatna wycena.";
 const URL = `${SITE_URL}/uslugi`;
 
 export const Route = createFileRoute("/uslugi/")({

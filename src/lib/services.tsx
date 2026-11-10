@@ -44,8 +44,8 @@ export const ALL_SERVICES: ServiceMeta[] = [
   {
     slug: "detailing-wnetrza",
     title: "Detailing wnętrza",
-    metaTitle: "Detailing wnętrza Dąbrowa Górnicza | WM Detail Car Detailing",
-    description: "Detailing wnętrza samochodu w Dąbrowie Górniczej — pranie tapicerki, czyszczenie skóry, dezynfekcja ozonem. Wnętrze jak z salonu.",
+    metaTitle: "Detailing wnętrza auta Dąbrowa Górnicza | WM Detail",
+    description: "Detailing wnętrza auta w Dąbrowie Górniczej od 150 zł: pranie tapicerki, czyszczenie skóry, ozonowanie. Bezpłatna wycena.",
     h1: "Detailing wnętrza samochodu — Dąbrowa Górnicza",
     intro: "Kompleksowe czyszczenie kabiny: tapicerka, skóra, plastiki, podsufitka i wykończenia. Dezynfekcja ozonem usuwa nieprzyjemne zapachy.",
     bullets: ["Pranie tapicerki materiałowej i welurowej", "Czyszczenie i pielęgnacja skóry", "Detailing plastików i wykończeń", "Dezynfekcja ozonem", "Mycie szyb od wewnątrz"],
@@ -73,7 +73,7 @@ export const ALL_SERVICES: ServiceMeta[] = [
   {
     slug: "korekta-lakieru",
     title: "Korekta lakieru",
-    metaTitle: "Korekta lakieru Dąbrowa Górnicza | WM Detail Car Detailing",
+    metaTitle: "Korekta lakieru Dąbrowa Górnicza | WM Detail",
     description: "Profesjonalna korekta lakieru w Dąbrowie Górniczej. Usuwanie rys, hologramów i defektów, maszynowa polerka i lustrzane wykończenie.",
     h1: "Korekta lakieru samochodowego — Dąbrowa Górnicza",
     intro: "Maszynowa korekta lakieru przywraca głębię koloru i lustrzane wykończenie. Usuwamy rysy, hologramy, swirle i utlenienie.",
@@ -87,8 +87,8 @@ export const ALL_SERVICES: ServiceMeta[] = [
   {
     slug: "powloki-ceramiczne",
     title: "Powłoki ceramiczne",
-    metaTitle: "Powłoki ceramiczne Dąbrowa Górnicza | WM Detail Car Detailing",
-    description: "Powłoki ceramiczne i kwarcowe w Dąbrowie Górniczej. Hydrofobowość, głębia koloru i długoletnia ochrona lakieru samochodu.",
+    metaTitle: "Powłoki ceramiczne Dąbrowa Górnicza | WM Detail",
+    description: "Powłoki ceramiczne w Dąbrowie Górniczej: 1 rok od 800 zł, 3 lata od 1800 zł, 5 lat od 2400 zł. Ochrona i głębia koloru lakieru.",
     h1: "Powłoki ceramiczne na lakier — Dąbrowa Górnicza",
     intro: "Profesjonalna aplikacja powłok ceramicznych i kwarcowych. Lakier zyskuje hydrofobowość, odporność na zabrudzenia i głębię koloru na lata.",
     bullets: ["Przygotowanie i korekta lakieru", "Aplikacja powłoki 2H–10H", "Hydrofobowość i efekt samoczyszczenia", "Ochrona przed UV i ptasimi odchodami", "Gwarancja trwałości"],
@@ -102,7 +102,7 @@ export const ALL_SERVICES: ServiceMeta[] = [
     slug: "pranie-tapicerki",
     title: "Pranie tapicerki",
     metaTitle: "Pranie tapicerki samochodowej Dąbrowa Górnicza | WM Detail",
-    description: "Pranie tapicerki samochodowej w Dąbrowie Górniczej. Ekstrakcyjne pranie foteli, podsufitki i dywaników. Usuwanie plam i zapachów.",
+    description: "Pranie tapicerki samochodowej w Dąbrowie Górniczej od 300 zł. Pranie foteli, podsufitki i dywaników, usuwanie plam i zapachów.",
     h1: "Pranie tapicerki samochodowej — Dąbrowa Górnicza",
     intro: "Ekstrakcyjne pranie tapicerki usuwa kurz, plamy i alergeny. Wnętrze odzyskuje świeżość, a foteliki dziecięce wracają do stanu fabrycznego.",
     bullets: ["Pranie foteli i kanapy", "Pranie podsufitki", "Pranie dywaników i wykładziny", "Usuwanie plam organicznych", "Neutralizacja zapachów"],
@@ -115,7 +115,7 @@ export const ALL_SERVICES: ServiceMeta[] = [
   {
     slug: "mycie-detailingowe",
     title: "Mycie detailingowe",
-    metaTitle: "Mycie detailingowe Dąbrowa Górnicza | WM Detail Car Detailing",
+    metaTitle: "Mycie detailingowe Dąbrowa Górnicza | WM Detail",
     description: "Bezdotykowe mycie detailingowe samochodu w Dąbrowie Górniczej. Pre wash, dwa wiadra, dekontaminacja chemiczna i bezpieczne osuszanie.",
     h1: "Mycie detailingowe samochodu — Dąbrowa Górnicza",
     intro: "Pełne, bezpieczne mycie samochodu metodą detailingową: pre wash, dwa wiadra, opony, felgi, wnęki i bezpieczne osuszanie microfibrą.",

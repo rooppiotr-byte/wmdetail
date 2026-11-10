@@ -23,8 +23,8 @@ import { AREA_SERVED, BUSINESS, SITE_URL } from "@/lib/site";
 import { buildOfferCatalog } from "@/lib/prices";
 
 
-const TITLE = "WM Detail Car Detailing | Detailing samochodowy Dąbrowa Górnicza";
-const DESCRIPTION = "Detailing samochodowy w Dąbrowie Górniczej: korekta lakieru, powłoki ceramiczne, detailing wnętrza, pranie tapicerki i mycie detailingowe. Bezpłatna wycena.";
+const TITLE = "Detailing Dąbrowa Górnicza | WM Detail – bezpłatna wycena";
+const DESCRIPTION = "Studio detailingu w Dąbrowie Górniczej: korekta lakieru, powłoki ceramiczne od 800 zł, wnętrze od 150 zł, pranie tapicerki. Bezpłatna wycena.";
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 const localBusinessJsonLd = {

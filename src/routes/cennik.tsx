@@ -5,9 +5,9 @@ import { PricingSection } from "@/components/PricingSection";
 import { SITE_URL } from "@/lib/site";
 import { buildOfferCatalog } from "@/lib/prices";
 
-const TITLE = "Cennik detailingu Dąbrowa Górnicza | WM Detail Car Detailing";
+const TITLE = "Cennik detailingu Dąbrowa Górnicza | WM Detail";
 const DESCRIPTION =
-  "Cennik detailingu w Dąbrowie Górniczej: wnętrze, pranie tapicerki, ozonowanie, korekta lakieru, powłoki ceramiczne i mycie. Bezpłatna wycena.";
+  "Ceny detailingu w Dąbrowie Górniczej: wnętrze od 150 zł, pranie tapicerki od 300 zł, ceramika od 800 zł, ozonowanie 80 zł. Bezpłatna wycena.";
 const URL = `${SITE_URL}/cennik`;
 
 export const Route = createFileRoute("/cennik")({
