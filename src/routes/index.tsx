@@ -17,6 +17,7 @@ import portfolio10 from "@/assets/mycie-lucidgt.webp";
 import portfolio11 from "@/assets/wizytowka-wmdetail.webp";
 import logoAsset from "@/assets/wm-detail-logo.png";
 import { PricingSection } from "@/components/PricingSection";
+import { ReviewsSection } from "@/components/ReviewsSection";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { AREA_SERVED, BUSINESS, SITE_URL } from "@/lib/site";
@@ -268,7 +269,8 @@ function Index() {
             </div>
           </div>
         </section>
-<PricingSection />
+<ReviewsSection />
+        <PricingSection />
         {/* KONTAKT + MAPA */}
         <section id="kontakt" className="relative py-20 sm:py-32 px-6" aria-labelledby="kontakt-heading">
           <div className="max-w-7xl mx-auto">
@@ -341,7 +343,7 @@ function Index() {
               <div className="rounded-xl overflow-hidden border-silver shadow-elegant min-h-[360px] sm:min-h-[500px]">
                 <iframe
                   title="Mapa dojazdu — WM Detail Car Detailing, Dąbrowa Górnicza"
-                  src="https://www.google.com/maps?q=ul.+%C5%9Aw.+Antoniego+166,+41-303+D%C4%85browa+G%C3%B3rnicza&output=embed"
+                  src="https://www.google.com/maps?q=ul.+%C5%9Aw.+Antoniego+166,+41-300+D%C4%85browa+G%C3%B3rnicza&output=embed"
                   className="w-full h-full min-h-[360px] sm:min-h-[500px] grayscale contrast-125"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

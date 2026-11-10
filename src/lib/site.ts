@@ -5,7 +5,7 @@ export const BUSINESS = {
   phoneHref: "tel:+48505797300",
   email: "biuro@wmdetail.pl",
   street: "ul. Św. Antoniego 166",
-  postalCode: "41-303",
+  postalCode: "41-300",
   city: "Dąbrowa Górnicza",
   region: "Śląskie",
   country: "PL",
