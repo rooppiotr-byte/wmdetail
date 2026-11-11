@@ -88,7 +88,7 @@ export const Route = createFileRoute("/")({
 
 const services = [
   { icon: Droplets, title: "Mycie detailingowe", desc: "Pre wash, opony i felgi, wnęki drzwi, osuszanie, szyby.", img: mycieImg, to: "/uslugi/mycie-detailingowe", alt: "Audi e-tron Sportback po myciu detailingowym w WM Detail w Dąbrowie Górniczej" },
-  { icon: Sparkles, title: "Korekta lakieru", desc: "Usuwanie rys, hologramów i defektów. Poprawa połysku i redukcja zarysowań.", img: korektaImg, to: "/uslugi/korekta-lakieru", alt: "Maszynowa korekta lakieru w studio WM Detail w Dąbrowie Górniczej" },
+  { icon: Sparkles, title: "Korekta lakieru", desc: "Usuwanie rys, hologramów i defektów. Poprawa połysku i redukcja zarysowań.", img: korektaImg, pos: "50% 62%", to: "/uslugi/korekta-lakieru", alt: "Maszynowa korekta lakieru w studio WM Detail w Dąbrowie Górniczej" },
   { icon: Shield, title: "Powłoki ceramiczne", desc: "Profesjonalne powłoki kwarcowe i ceramiczne. Hydrofobowość, głębia koloru i długoletnia ochrona lakieru.", img: serviceCeramic, to: "/uslugi/powloki-ceramiczne", alt: "Lucid Air po korekcie lakieru i powłoce ceramicznej w WM Detail" },
   { icon: Sofa, title: "Detailing wnętrza", desc: "Pranie tapicerki, czyszczenie skóry, dezynfekcja ozonem. Wnętrze jak prosto z salonu.", img: wnetrzeImg, to: "/uslugi/detailing-wnetrza", alt: "Wnętrze Lucida po detailingu w WM Detail w Dąbrowie Górniczej" },
 ];
@@ -165,7 +165,8 @@ function Index() {
                     loading="lazy"
                     width={640}
                     height={480}
-                    className="aspect-[4/3] w-full object-cover object-[50%_40%] transition-transform duration-700 group-hover:scale-105"
+                    style={{ objectPosition: ("pos" in s ? s.pos : undefined) ?? "50% 40%" }}
+                    className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="relative p-5">
                     <s.icon className="w-5 h-5 text-signal mb-3" aria-hidden="true" />
