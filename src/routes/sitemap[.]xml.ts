@@ -7,6 +7,7 @@ const PATHS = [
   "/uslugi",
   "/cennik",
   "/o-nas",
+  "/realizacje",
   "/uslugi/detailing-wnetrza",
   "/uslugi/korekta-lakieru",
   "/uslugi/powloki-ceramiczne",

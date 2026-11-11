@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PolitykaPrywatnosciRouteImport } from './routes/polityka-prywatnosci'
+import { Route as RealizacjeRouteImport } from './routes/realizacje'
 import { Route as ONasRouteImport } from './routes/o-nas'
 import { Route as CennikRouteImport } from './routes/cennik'
 import { Route as IndexRouteImport } from './routes/index'
@@ -29,6 +30,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const PolitykaPrywatnosciRoute = PolitykaPrywatnosciRouteImport.update({
   id: '/polityka-prywatnosci',
   path: '/polityka-prywatnosci',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RealizacjeRoute = RealizacjeRouteImport.update({
+  id: '/realizacje',
+  path: '/realizacje',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ONasRoute = ONasRouteImport.update({
@@ -81,6 +87,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cennik': typeof CennikRoute
   '/o-nas': typeof ONasRoute
+  '/realizacje': typeof RealizacjeRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/uslugi/detailing-wnetrza': typeof UslugiDetailingWnetrzaRoute
@@ -94,6 +101,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cennik': typeof CennikRoute
   '/o-nas': typeof ONasRoute
+  '/realizacje': typeof RealizacjeRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/uslugi/detailing-wnetrza': typeof UslugiDetailingWnetrzaRoute
@@ -108,6 +116,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/cennik': typeof CennikRoute
   '/o-nas': typeof ONasRoute
+  '/realizacje': typeof RealizacjeRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/uslugi/detailing-wnetrza': typeof UslugiDetailingWnetrzaRoute
@@ -123,6 +132,7 @@ export interface FileRouteTypes {
     | '/'
     | '/cennik'
     | '/o-nas'
+    | '/realizacje'
     | '/polityka-prywatnosci'
     | '/sitemap.xml'
     | '/uslugi/detailing-wnetrza'
@@ -136,6 +146,7 @@ export interface FileRouteTypes {
     | '/'
     | '/cennik'
     | '/o-nas'
+    | '/realizacje'
     | '/polityka-prywatnosci'
     | '/sitemap.xml'
     | '/uslugi/detailing-wnetrza'
@@ -149,6 +160,7 @@ export interface FileRouteTypes {
     | '/'
     | '/cennik'
     | '/o-nas'
+    | '/realizacje'
     | '/polityka-prywatnosci'
     | '/sitemap.xml'
     | '/uslugi/detailing-wnetrza'
@@ -163,6 +175,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CennikRoute: typeof CennikRoute
   ONasRoute: typeof ONasRoute
+  RealizacjeRoute: typeof RealizacjeRoute
   PolitykaPrywatnosciRoute: typeof PolitykaPrywatnosciRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   UslugiDetailingWnetrzaRoute: typeof UslugiDetailingWnetrzaRoute
@@ -187,6 +200,13 @@ declare module '@tanstack/react-router' {
       path: '/polityka-prywatnosci'
       fullPath: '/polityka-prywatnosci'
       preLoaderRoute: typeof PolitykaPrywatnosciRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/realizacje': {
+      id: '/realizacje'
+      path: '/realizacje'
+      fullPath: '/realizacje'
+      preLoaderRoute: typeof RealizacjeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/o-nas': {
@@ -259,6 +279,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CennikRoute: CennikRoute,
   ONasRoute: ONasRoute,
+  RealizacjeRoute: RealizacjeRoute,
   PolitykaPrywatnosciRoute: PolitykaPrywatnosciRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   UslugiDetailingWnetrzaRoute: UslugiDetailingWnetrzaRoute,

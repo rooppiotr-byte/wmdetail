@@ -26,7 +26,7 @@ function PriceGroup({
     <div className="rounded-xl border-silver bg-graphite p-6">
       <div className="mb-2 flex items-center gap-3">
         <Icon className="h-5 w-5 text-signal" aria-hidden="true" />
-        <Group className="font-display text-xl font-semibold">{title}</Group>
+        <Group className="font-display text-2xl font-semibold">{title}</Group>
       </div>
       <ul>
         {items.map((item) => (
@@ -66,7 +66,7 @@ export function PricingSection({ asPage = false }: { asPage?: boolean }) {
             <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold">Poznaj nasze ceny</h2>
           )}
 
-          <p className="mt-4 text-muted-foreground">
+          <p className="mt-4 text-foreground/80">
             Ceny orientacyjne. Ostateczna zależy od wielkości auta i stanu lakieru.
           </p>
         </div>
@@ -79,7 +79,7 @@ export function PricingSection({ asPage = false }: { asPage?: boolean }) {
 
         <div className="mt-10 mx-auto max-w-3xl rounded-xl border-silver bg-graphite p-6 sm:p-8 text-center">
           <h3 className="font-display text-2xl font-semibold">Nie ma Twojej usługi na liście?</h3>
-          <p className="mt-3 text-muted-foreground">
+          <p className="mt-3 text-foreground/80">
             Robimy też woski, renowację reflektorów, detailing motocykli i przygotowanie auta do sprzedaży.
             Wycenę przygotujemy bezpłatnie po telefonie lub zdjęciach.
           </p>

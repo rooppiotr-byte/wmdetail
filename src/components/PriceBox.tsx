@@ -60,23 +60,23 @@ export function PriceRow({
   const entries = typeof price === "string" ? null : Object.entries(price);
   const from = typeof price === "string" ? price : entries![0][1].startsWith("od") ? entries![0][1] : `od ${entries![0][1]}`;
   return (
-    <li className="flex items-baseline justify-between gap-4 border-b border-white/10 py-3 last:border-b-0">
+    <li className="flex items-baseline justify-between gap-4 border-b border-white/10 py-3.5 last:border-b-0">
       <div className="min-w-0">
-        <Heading className="text-base font-medium text-foreground">{title}</Heading>
-        {detailed && <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{features.join(" · ")}</p>}
+        <Heading className="text-lg font-semibold text-foreground">{title}</Heading>
+        {detailed && <p className="mt-1 text-sm leading-relaxed text-foreground/80">{features.join(" · ")}</p>}
       </div>
       <div className="shrink-0 text-right">
         {detailed && entries ? (
-          <div className="space-y-0.5 text-sm">
+          <div className="space-y-0.5 text-base">
             {entries.map(([size, value]) => (
               <div key={size} className="flex justify-end gap-3">
-                <span className="text-muted-foreground">{size}</span>
-                <span className="font-semibold text-silver whitespace-nowrap">{value}</span>
+                <span className="text-foreground/80">{size}</span>
+                <span className="font-bold text-foreground whitespace-nowrap">{value}</span>
               </div>
             ))}
           </div>
         ) : (
-          <span className="font-semibold text-silver whitespace-nowrap">{from}</span>
+          <span className="text-lg font-bold text-foreground whitespace-nowrap">{from}</span>
         )}
       </div>
     </li>

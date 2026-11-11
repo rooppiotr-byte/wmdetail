@@ -1,20 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Sparkles, Droplets, Sofa, Shield, MapPin, Phone, Mail, Instagram, ArrowRight, Clock } from "lucide-react";
 import heroCar from "@/assets/detailing-samochodu-lucid-air.webp";
-import servicePolish from "@/assets/lucid-air-pure-detailing-kompleksowy.webp";
-import serviceInterior from "@/assets/lucyna-gt-srodek-nastrone.webp";
 import serviceCeramic from "@/assets/lucid-air-detailing-korekta-ceramika.webp";
-import portfolio1 from "@/assets/lucid-air-detailing-korekta-ceramika.webp";
-import portfolio2 from "@/assets/lucid-air-pure-detailing-kompleksowy.webp";
-import portfolio3 from "@/assets/mazda-3-mycie-detailingowe.webp";
-import portfolio4 from "@/assets/lucyna-gt-srodek-nastrone.webp";
-import portfolio5 from "@/assets/mycie-detailingowe-audia3.webp";
-import portfolio6 from "@/assets/mycie-zewnetrzne-audi.webp";
-import portfolio7 from "@/assets/detailing-cupra.webp";
-import portfolio8 from "@/assets/detailing-lucid.webp";
-import portfolio9 from "@/assets/mycie-komora.webp";
-import portfolio10 from "@/assets/mycie-lucidgt.webp";
-import portfolio11 from "@/assets/wizytowka-wmdetail.webp";
+import { PORTFOLIO } from "@/lib/portfolio";
+import korektaImg from "@/assets/korekta-lakieru-polerka.webp";
+import wnetrzeImg from "@/assets/lucid-wnetrze-detailing.webp";
+import mycieImg from "@/assets/mycie-detailingowe-lucidgt.webp";
 import logoAsset from "@/assets/wm-detail-logo.png";
 import { PricingSection } from "@/components/PricingSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
@@ -96,60 +87,13 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: Droplets, title: "Mycie detailingowe", desc: "Pre wash, opony i felgi, wnęki drzwi, osuszanie, szyby.", img: servicePolish, to: "/uslugi/mycie-detailingowe", alt: "Mycie detailingowe samochodu w studio w Dąbrowie Górniczej" },
-  { icon: Sparkles, title: "Korekta lakieru", desc: "Usuwanie rys, hologramów i defektów. Poprawa połysku i redukcja zarysowań.", img: serviceCeramic, to: "/uslugi/korekta-lakieru", alt: "Korekta lakieru maszynową polerką — WM Detail Dąbrowa Górnicza" },
-  { icon: Shield, title: "Powłoki ceramiczne", desc: "Profesjonalne powłoki kwarcowe i ceramiczne. Hydrofobowość, głębia koloru i długoletnia ochrona lakieru.", img: serviceCeramic, to: "/uslugi/powloki-ceramiczne", alt: "Aplikacja powłoki ceramicznej na lakier samochodu" },
-  { icon: Sofa, title: "Detailing wnętrza", desc: "Pranie tapicerki, czyszczenie skóry, dezynfekcja ozonem. Wnętrze jak prosto z salonu.", img: serviceInterior, to: "/uslugi/detailing-wnetrza", alt: "Detailing wnętrza auta — czyszczenie tapicerki i skóry" },
+  { icon: Droplets, title: "Mycie detailingowe", desc: "Pre wash, opony i felgi, wnęki drzwi, osuszanie, szyby.", img: mycieImg, to: "/uslugi/mycie-detailingowe", alt: "Mycie detailingowe Lucida w studio WM Detail w Dąbrowie Górniczej" },
+  { icon: Sparkles, title: "Korekta lakieru", desc: "Usuwanie rys, hologramów i defektów. Poprawa połysku i redukcja zarysowań.", img: korektaImg, to: "/uslugi/korekta-lakieru", alt: "Maszynowa korekta lakieru w studio WM Detail w Dąbrowie Górniczej" },
+  { icon: Shield, title: "Powłoki ceramiczne", desc: "Profesjonalne powłoki kwarcowe i ceramiczne. Hydrofobowość, głębia koloru i długoletnia ochrona lakieru.", img: serviceCeramic, to: "/uslugi/powloki-ceramiczne", alt: "Lucid Air po korekcie lakieru i powłoce ceramicznej w WM Detail" },
+  { icon: Sofa, title: "Detailing wnętrza", desc: "Pranie tapicerki, czyszczenie skóry, dezynfekcja ozonem. Wnętrze jak prosto z salonu.", img: wnetrzeImg, to: "/uslugi/detailing-wnetrza", alt: "Wnętrze Lucida po detailingu w WM Detail w Dąbrowie Górniczej" },
 ];
 
-const portfolio = [
-  { img: portfolio1, title: "Lucid Air Pure", tag: "Korekta + Ceramika", alt: "Lucid Air Pure po korekcie lakieru i powłoce ceramicznej w WM Detail" },
-  { img: portfolio2, title: "Lucid Air GT", tag: "Detailing kompletny", alt: "Lucid Air GT po kompletnym detailingu w Dąbrowie Górniczej" },
-  { img: portfolio3, title: "Mazda 3", tag: "Detailing zewnętrzny", alt: "Mazda 3 po detailingu zewnętrznym — realizacja WM Detail" },
-  { img: portfolio4, title: "Lucid Grand Touring", tag: "Detailing wnętrza", alt: "Lucid Grand Touring po detailingu wnętrza" },
-    {
-    img: portfolio5,
-    title: "Audi A3",
-    tag: "Mycie detailingowe",
-    alt: "Audi A3 po myciu detailingowym w WM Detail w Dąbrowie Górniczej",
-  },
-  {
-    img: portfolio6,
-    title: "Audi e-tron Sportback",
-    tag: "Mycie detailingowe",
-    alt: "Audi e-tron Sportback po myciu detailingowym w WM Detail",
-  },
-    {
-    img: portfolio7,
-    title: "Cupra",
-    tag: "Detailing wnętrza",
-    alt: "Wnętrze Cupry po detailingu w WM Detail w Dąbrowie Górniczej",
-  },
-  {
-    img: portfolio8,
-    title: "Lucid Air",
-    tag: "Detailing wnętrza",
-    alt: "Wnętrze Lucid Air po detailingu w WM Detail w Dąbrowie Górniczej",
-  },
-  {
-    img: portfolio9,
-    title: "Komora silnika",
-    tag: "Mycie detailingowe",
-    alt: "Czyszczenie komory silnika wykonane przez WM Detail",
-  },
-  {
-    img: portfolio10,
-    title: "Lucid Grand Touring",
-    tag: "Mycie zewnętrzne",
-    alt: "Lucid Grand Touring po myciu zewnętrznym w WM Detail",
-  },
-  {
-    img: portfolio11,
-    title: "WM Detail",
-    tag: "Dbałość o detale",
-    alt: "Wizytówka WM Detail w zadbanym wnętrzu samochodu",
-  },
-];
+
 
 function Index() {
   return (
@@ -214,15 +158,25 @@ function Index() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {services.map((s) => (
-                <article key={s.title} className="group relative rounded-lg bg-graphite border-silver card-glow p-5">
-                  <s.icon className="w-6 h-6 text-signal mb-4" aria-hidden="true" />
-                  <h3 className="font-display text-lg font-semibold mb-2">
-                    <Link to={s.to} className="after:absolute after:inset-0 after:content-[''] hover:text-silver transition-colors">
-                      {s.title}
-                    </Link>
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">{s.desc}</p>
-                  <ArrowRight className="absolute right-5 top-5 w-4 h-4 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-signal" aria-hidden="true" />
+                <article key={s.title} className="group relative overflow-hidden rounded-lg bg-graphite border-silver card-glow">
+                  <img
+                    src={s.img}
+                    alt={s.alt}
+                    loading="lazy"
+                    width={640}
+                    height={480}
+                    className="aspect-[4/3] w-full object-cover object-[50%_40%] transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="relative p-5">
+                    <s.icon className="w-5 h-5 text-signal mb-3" aria-hidden="true" />
+                    <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                      <Link to={s.to} className="after:absolute after:inset-0 after:content-[''] hover:text-silver transition-colors">
+                        {s.title}
+                      </Link>
+                    </h3>
+                    <p className="text-sm text-foreground/85 leading-relaxed line-clamp-2">{s.desc}</p>
+                    <ArrowRight className="absolute right-5 top-5 w-4 h-4 text-signal transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                  </div>
                 </article>
               ))}
             </div>
@@ -240,16 +194,21 @@ function Index() {
             </div>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-              {portfolio.slice(0, 8).map((p) => (
+              {PORTFOLIO.slice(0, 8).map((p) => (
                 <figure key={p.title + p.tag} className="group relative overflow-hidden rounded-lg border-silver">
                   <img src={p.img} alt={p.alt} loading="lazy" width={1280} height={896} className="w-full h-40 sm:h-52 object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-transparent" />
                   <figcaption className="absolute bottom-0 inset-x-0 p-3 sm:p-4">
-                    <h3 className="font-display text-sm sm:text-base font-semibold leading-tight">{p.title}</h3>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mt-1">{p.tag}</p>
+                    <h3 className="font-display text-sm sm:text-base font-semibold leading-tight text-foreground">{p.title}</h3>
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-foreground/90 mt-1">{p.tag}</p>
                   </figcaption>
                 </figure>
               ))}
+            </div>
+            <div className="mt-10 text-center">
+              <Link to={"/realizacje" as any} className="btn-glow inline-flex items-center gap-3 px-8 py-4 border-silver rounded-md font-semibold uppercase tracking-widest text-sm text-silver hover:bg-secondary">
+                Zobacz więcej realizacji <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
             </div>
           </div>
         </section>
