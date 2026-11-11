@@ -1,7 +1,7 @@
 import { Phone } from "lucide-react";
 
 import { BUSINESS } from "@/lib/site";
-import imgStudio from "@/assets/korekta-lakieru-polerka.webp";
+import imgStudio from "@/assets/lucid-air-pure-detailing-kompleksowy.webp";
 import imgVisit from "@/assets/mycie-detailingowe-lucidgt.webp";
 import imgInterior from "@/assets/lucid-wnetrze-detailing.webp";
 import imgPaint from "@/assets/lucid-air-detailing-korekta-ceramika.webp";
@@ -12,7 +12,7 @@ const PARAGRAPHS = [
     title: null,
     text: `WM Detail to nowe, szybko rozwijające się studio detailingu w Dąbrowie Górniczej, przy ${BUSINESS.street}. W krótkim czasie obsłużyliśmy wiele aut premium, m.in. Lucida i Teslę. Zajmujemy się myciem detailingowym, detailingiem wnętrza, praniem tapicerki, korektą lakieru i powłokami ceramicznymi.`,
     img: imgStudio,
-    alt: "Maszynowa korekta lakieru w studio WM Detail w Dąbrowie Górniczej",
+    alt: "Lucid Air Pure po kompleksowym detailingu w WM Detail w Dąbrowie Górniczej",
   },
   {
     title: "Jak wygląda wizyta",
