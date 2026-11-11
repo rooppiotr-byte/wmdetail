@@ -187,7 +187,7 @@ function Index() {
                 Detailing samochodowy Dąbrowa Górnicza
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed mb-10">
-                Profesjonalny detailing samochodowy w Dąbrowie Górniczej — detailing wnętrza, korekta lakieru, powłoki ceramiczne i pranie tapicerki. Kompleksowa pielęgnacja Twojego auta w jednym studio.
+                Detailing wnętrza, korekta lakieru, powłoki ceramiczne i pranie tapicerki. Bezpłatna wycena po telefonie lub zdjęciach auta.
               </p>
               <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center justify-center gap-4">
                 <a href={BUSINESS.phoneHref} aria-label={`Umów termin — zadzwoń ${BUSINESS.phone}`} className="animate-breathe btn-signal btn-glow inline-flex justify-center items-center gap-3 px-8 py-4 rounded-md font-semibold uppercase tracking-widest text-sm">
@@ -198,78 +198,62 @@ function Index() {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </a>
               </div>
-              <p className="mt-5 text-sm text-muted-foreground">Bezpłatna wycena po kontakcie telefonicznym lub przesłaniu zdjęć auta.</p>
             </div>
           </div>
         </section>
 
-        {/* USLUGI */}
-        <section id="uslugi" className="relative py-20 sm:py-32 px-6" aria-labelledby="uslugi-heading">
+        {/* OFERTA */}
+        <section id="uslugi" className="relative py-16 sm:py-24 px-6" aria-labelledby="uslugi-heading">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col items-center text-center gap-6 mb-16">
-              <div>
-                <p className="eyebrow eyebrow-c mb-4">Usługi</p>
-                <h2 id="uslugi-heading" className="font-display text-4xl sm:text-5xl md:text-6xl font-bold">
-                  Co dla Ciebie <span className="text-silver">zrobimy</span>
-                </h2>
-              </div>
+            <div className="text-center mb-10">
+              <p className="eyebrow eyebrow-c mb-4">Usługi</p>
+              <h2 id="uslugi-heading" className="font-display text-4xl sm:text-5xl md:text-6xl font-bold">
+                <span className="text-silver">Oferta</span>
+              </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {services.map((s) => (
-                <article key={s.title} className="group relative overflow-hidden rounded-xl bg-graphite border-silver shadow-elegant card-glow p-8">
-                  <div className="w-12 h-12 rounded-md bg-background/80 border-silver flex items-center justify-center mb-6">
-                    <s.icon className="w-5 h-5 text-signal" aria-hidden="true" />
-                  </div>
-                  <h3 className="font-display text-2xl font-semibold mb-3">
-                    <Link to={s.to} className="hover:text-silver transition-colors">{s.title}</Link>
+                <article key={s.title} className="group relative rounded-lg bg-graphite border-silver card-glow p-5">
+                  <s.icon className="w-6 h-6 text-signal mb-4" aria-hidden="true" />
+                  <h3 className="font-display text-lg font-semibold mb-2">
+                    <Link to={s.to} className="after:absolute after:inset-0 after:content-[''] hover:text-silver transition-colors">
+                      {s.title}
+                    </Link>
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">{s.desc}</p>
-                  <Link to={s.to} className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-silver underline underline-offset-4 decoration-signal/60 hover:text-foreground">
-                    Dowiedz się więcej <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                  </Link>
+                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">{s.desc}</p>
+                  <ArrowRight className="absolute right-5 top-5 w-4 h-4 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-signal" aria-hidden="true" />
                 </article>
               ))}
-            </div>
-            <div className="mt-12 text-center">
-              <a href="#kontakt" className="inline-flex items-center gap-3 px-8 py-4 btn-signal btn-glow rounded-md font-semibold uppercase tracking-widest text-sm">
-                <Phone className="w-4 h-4" aria-hidden="true" /> Umów termin
-              </a>
             </div>
           </div>
         </section>
 
         {/* REALIZACJE */}
-        <section id="realizacje" className="relative py-20 sm:py-32 px-6 bg-graphite" aria-labelledby="realizacje-heading">
+        <section id="realizacje" className="relative py-16 sm:py-24 px-6 bg-graphite" aria-labelledby="realizacje-heading">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-16 text-center">
+            <div className="mb-10 text-center">
               <p className="eyebrow eyebrow-c mb-4">Realizacje</p>
               <h2 id="realizacje-heading" className="font-display text-4xl sm:text-5xl md:text-6xl font-bold">
                 Nasza <span className="text-silver">robota</span>
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {portfolio.map((p, i) => (
-                <figure key={p.title} className={`group relative overflow-hidden rounded-xl border-silver shadow-elegant ${i === 0 ? "md:col-span-2" : ""}`}>
-                  <img src={p.img} alt={p.alt} loading="lazy" width={1280} height={896} className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${i === 0 ? "h-[28rem]" : "h-80"}`} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-                  <figcaption className="absolute bottom-0 inset-x-0 p-8">
-                    <p className="text-xs uppercase tracking-[0.3em] text-silver mb-2">{p.tag}</p>
-                    <h3 className="font-display text-2xl font-semibold">{p.title}</h3>
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mt-2">Dąbrowa Górnicza</p>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+              {portfolio.slice(0, 8).map((p) => (
+                <figure key={p.title + p.tag} className="group relative overflow-hidden rounded-lg border-silver">
+                  <img src={p.img} alt={p.alt} loading="lazy" width={1280} height={896} className="w-full h-40 sm:h-52 object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
+                  <figcaption className="absolute bottom-0 inset-x-0 p-3 sm:p-4">
+                    <h3 className="font-display text-sm sm:text-base font-semibold leading-tight">{p.title}</h3>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mt-1">{p.tag}</p>
                   </figcaption>
                 </figure>
               ))}
             </div>
-            <div className="mt-12 text-center">
-              <a href="#kontakt" className="inline-flex items-center gap-3 px-8 py-4 btn-glow border-silver rounded-md font-semibold uppercase tracking-widest text-sm text-silver hover:bg-secondary">
-                <Phone className="w-4 h-4" aria-hidden="true" /> Umów termin
-              </a>
-            </div>
           </div>
         </section>
-<ReviewsSection />
+        <ReviewsSection />
         <PricingSection />
         {/* KONTAKT + MAPA */}
         <section id="kontakt" className="relative py-20 sm:py-32 px-6" aria-labelledby="kontakt-heading">
